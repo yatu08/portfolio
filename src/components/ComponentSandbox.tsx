@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   ArrowLeft, 
   Copy, 
   Check, 
   Code2, 
   Eye, 
-  Play, 
-  RotateCcw, 
-  Bell, 
   X, 
   CheckCircle2, 
   AlertCircle, 
@@ -15,13 +12,7 @@ import {
   TrendingUp, 
   ChevronDown, 
   Sparkles, 
-  Layers, 
-  Sliders, 
-  Cpu, 
   Maximize2,
-  Search,
-  Plus,
-  Minus
 } from 'lucide-react';
 
 interface ComponentSandboxProps {
