@@ -1,5 +1,11 @@
 import React from 'react';
-import { Briefcase, Building2, Calendar, Check, Code2 } from 'lucide-react';
+import { 
+  LuBriefcase as Briefcase, 
+  LuBuilding2 as Building2, 
+  LuCalendar as Calendar, 
+  LuCheck as Check, 
+  LuCodeXml as Code2 
+} from 'react-icons/lu';
 import { experienceList } from '../data/experience';
 import { profileData } from '../data/profile';
 

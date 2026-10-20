@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { 
-  ArrowLeft, 
-  Copy, 
-  Check, 
-  Code2, 
-  Eye, 
-  X, 
-  CheckCircle2, 
-  AlertCircle, 
-  Info, 
-  TrendingUp, 
-  ChevronDown, 
-  Sparkles, 
-  Maximize2,
-} from 'lucide-react';
+  LuArrowLeft as ArrowLeft, 
+  LuCopy as Copy, 
+  LuCheck as Check, 
+  LuCodeXml as Code2, 
+  LuEye as Eye, 
+  LuX as X, 
+  LuCircleCheck as CheckCircle2, 
+  LuCircleAlert as AlertCircle, 
+  LuInfo as Info, 
+  LuTrendingUp as TrendingUp, 
+  LuChevronDown as ChevronDown, 
+  LuSparkles as Sparkles, 
+  LuMaximize2 as Maximize2,
+} from 'react-icons/lu';
 
 interface ComponentSandboxProps {
   onBack?: () => void;

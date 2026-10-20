@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { 
-  ArrowRight, 
-  Mail, 
-  Linkedin, 
-  Github, 
-  CheckCircle2, 
-  AlertCircle, 
-  Loader2,
-  Copy,
-  Check
-} from 'lucide-react';
+  LuArrowRight as ArrowRight, 
+  LuMail as Mail, 
+  LuLinkedin as Linkedin, 
+  LuGithub as Github, 
+  LuCircleCheck as CheckCircle2, 
+  LuCircleAlert as AlertCircle, 
+  LuLoaderCircle as Loader2,
+  LuCopy as Copy,
+  LuCheck as Check
+} from 'react-icons/lu';
 import confetti from 'canvas-confetti';
 import { profileData } from '../data/profile';
 

@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { 
-  ArrowRight, 
-  Download, 
-  Sparkles, 
-  Github, 
-  Linkedin, 
-  Mail, 
-  Check, 
-  Copy,
-  Terminal,
-  Code2,
-  FileText
-} from 'lucide-react';
+  LuArrowRight as ArrowRight, 
+  LuDownload as Download, 
+  LuSparkles as Sparkles, 
+  LuGithub as Github, 
+  LuLinkedin as Linkedin, 
+  LuMail as Mail, 
+  LuCheck as Check, 
+  LuCopy as Copy, 
+  LuTerminal as Terminal, 
+  LuCodeXml as Code2, 
+  LuFileText as FileText 
+} from 'react-icons/lu';
 import { profileData } from '../data/profile';
 
 interface HeroProps {
@@ -55,11 +55,11 @@ const engineer: FrontendDeveloper = {
       filename: 'career.md',
       language: 'markdown',
       content: `### Career Highlights
-- 4+ Years building enterprise & customer-facing apps
-- Shipped 20+ responsive web applications
-- Softobiz UI Developer & WebXTechnology contributions
-- 99.8% crash-free session stability
-- Seamless Figma-to-production design fidelity`
+- 4+ Years frontend engineering experience
+- UI Developer at Softobiz (Angular, React, Next.js)
+- 6 Months at WebXTechnology as Web Designer
+- Figma-to-code design fidelity & token architecture
+- REST API integration & reactive state management`
     }
   };
 
@@ -90,7 +90,7 @@ const engineer: FrontendDeveloper = {
     'Micro-frontends',
     'REST & WebSocket APIs',
     'Jest & RTL',
-    'Performance 99.8%'
+    'Core Web Vitals'
   ];
 
   return (
@@ -378,19 +378,19 @@ const engineer: FrontendDeveloper = {
                     <ul className="space-y-2.5 text-foreground/90 font-sans">
                       <li className="flex items-start gap-2.5">
                         <span className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
-                        <span className="leading-relaxed"><strong className="text-foreground font-semibold">4+ Years</strong> engineering enterprise &amp; high-growth consumer apps</span>
+                        <span className="leading-relaxed"><strong className="text-foreground font-semibold">4+ Years</strong> professional experience in frontend development</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
-                        <span className="leading-relaxed">Shipped <strong className="text-foreground font-semibold">20+ production web applications</strong></span>
+                        <span className="leading-relaxed"><strong className="text-foreground font-semibold">UI Developer at Softobiz</strong> (React, Angular &amp; Next.js)</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
-                        <span className="leading-relaxed">Maintained <strong className="text-foreground font-semibold">99.8% crash-free session stability</strong></span>
+                        <span className="leading-relaxed"><strong className="text-foreground font-semibold">6 Months at WebXTechnology</strong> as Web Designer</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <span className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
-                        <span className="leading-relaxed">Active <strong className="text-foreground font-semibold">AI UI Integrations</strong> &amp; streaming chat UX</span>
+                        <span className="leading-relaxed">Pixel-perfect Figma conversion &amp; <strong className="text-foreground font-semibold">AI streaming interfaces</strong></span>
                       </li>
                     </ul>
                   </div>

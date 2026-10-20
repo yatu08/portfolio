@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
-import { X, ShieldCheck, Check } from 'lucide-react';
+import { 
+  LuX as X, 
+  LuShieldCheck as ShieldCheck, 
+  LuCheck as Check 
+} from 'react-icons/lu';
 import { Project } from '../types';
 
 interface ProjectModalProps {

@@ -1,5 +1,11 @@
 import React from 'react';
-import { X, Printer, GraduationCap, Mail, MapPin } from 'lucide-react';
+import { 
+  LuX as X, 
+  LuPrinter as Printer, 
+  LuGraduationCap as GraduationCap, 
+  LuMail as Mail, 
+  LuMapPin as MapPin 
+} from 'react-icons/lu';
 import { profileData } from '../data/profile';
 import { experienceList } from '../data/experience';
 

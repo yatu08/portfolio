@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { 
-  Cpu,
-  GitBranch,
-  Layers,
-  Sparkles,
-  ChevronDown,
-  ChevronUp,
-  ArrowRight,
-  Code2
-} from 'lucide-react';
+  LuCpu as Cpu,
+  LuGitBranch as GitBranch,
+  LuLayers as Layers,
+  LuSparkles as Sparkles,
+  LuChevronDown as ChevronDown,
+  LuChevronUp as ChevronUp,
+  LuArrowRight as ArrowRight,
+  LuCodeXml as Code2
+} from 'react-icons/lu';
 import { skillsList, skillCategories } from '../data/skills';
 import { ParticleCanvas } from './ParticleCanvas';
 

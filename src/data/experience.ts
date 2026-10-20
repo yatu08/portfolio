@@ -7,18 +7,16 @@ export const experienceList: Experience[] = [
     company: "Softobiz",
     period: "Dec 2021 — Present",
     badge: "Current Role · 4+ Years",
-    description: "Leading frontend engineering initiatives across modern enterprise web applications, customer portals, and internal platforms. Specializing in React, Angular, Next.js, and TypeScript architectures.",
+    description: "Developing enterprise web applications, customer portals, and internal dashboards using React.js, Angular, Next.js, and TypeScript.",
     responsibilities: [
-      "Engineered production-ready, high-traffic web applications using Angular, React.js, and Next.js.",
-      "Converted intricate Figma and UI/UX design specifications into pixel-perfect, accessible, and responsive user interfaces.",
-      "Integrated complex RESTful APIs and established structured frontend state management with clean, maintainable patterns.",
-      "Collaborated closely with cross-functional product squads, backend engineers, and design leads to ship reliable features on schedule.",
-      "Diagnosed and resolved critical UI rendering bottlenecks, elevating Lighthouse performance scores and Core Web Vitals.",
-      "Researched and implemented AI-driven frontend enhancements, including intelligent search, streaming completions, and predictive UI patterns.",
-      "Prototyped LLM-powered interfaces and integrated OpenAI & Claude APIs into existing web applications for enhanced productivity.",
-      "Mentored junior frontend developers and established team-wide standards for component documentation, clean code, and TypeScript typing."
+      "Architect and maintain scalable frontend modules using React.js, Angular, and Next.js.",
+      "Translate complex Figma designs and design tokens into responsive, accessible, pixel-perfect interfaces.",
+      "Integrate RESTful APIs and implement predictable state management using RxJS observables.",
+      "Optimize frontend asset loading, code splitting, and Core Web Vitals for fast page performance.",
+      "Implement AI-powered frontend features, including real-time token streaming chat and OpenAI API integrations.",
+      "Collaborate in agile cross-functional sprints with backend engineers, UX designers, and QA teams."
     ],
-    techStack: ["React.js", "Angular", "Next.js", "TypeScript", "Tailwind CSS", "SCSS", "REST APIs", "AI Integrations"]
+    techStack: ["React.js", "Angular", "Next.js", "TypeScript", "Tailwind CSS", "SCSS", "RxJS", "REST APIs"]
   },
   {
     id: "webxtechnology",
@@ -26,29 +24,13 @@ export const experienceList: Experience[] = [
     company: "WebXTechnology",
     period: "6 Months",
     badge: "6 Months Experience",
-    description: "Designed and developed customized client web interfaces, crafted responsive component layouts, and ensured seamless cross-browser fidelity across diverse screen sizes.",
+    description: "Designed and developed responsive client web interfaces, customized UI components, and ensured cross-browser compatibility.",
     responsibilities: [
-      "Built multiple client-facing responsive web interfaces utilizing modern JavaScript, HTML5, and CSS3/SCSS.",
-      "Designed and developed customized, reusable UI components adhering strictly to client branding and UX specifications.",
-      "Conducted thorough cross-browser testing and resolved compatibility and visual discrepancies across major browsers and devices.",
-      "Implemented responsive layouts and adaptive navigation systems for mobile, tablet, and desktop viewports.",
-      "Collaborated with teams to translate design mockups and wireframes into clean, interactive web experiences."
+      "Created responsive website layouts using HTML5, modern CSS3/SCSS, and JavaScript.",
+      "Converted client wireframes and design mockups into cross-browser compatible web pages.",
+      "Built reusable navigation menus, interactive forms, and responsive landing page sections.",
+      "Conducted cross-browser and mobile device testing to ensure seamless responsive behavior."
     ],
-    techStack: ["Web Design", "HTML5", "CSS3 / SCSS", "JavaScript (ES6+)", "Responsive Design", "UI/UX"]
-  },
-  {
-    id: "internship",
-    role: "Frontend Intern",
-    company: "Foundational Internship",
-    period: "Before WebXTechnology",
-    badge: "Early Foundation",
-    description: "Built a solid technical foundation in frontend web standards, component development, and modern development workflows.",
-    responsibilities: [
-      "Mastered core web fundamentals including semantic HTML5, modern CSS3 styling, and modern JavaScript programming.",
-      "Constructed foundational UI components, interactive forms, and responsive landing pages.",
-      "Gained hands-on experience with version control systems (Git & GitHub) and collaborative branching workflows.",
-      "Participated in code reviews and learned industry best practices for code readability and maintainability."
-    ],
-    techStack: ["HTML5", "CSS3", "JavaScript", "Git", "UI Fundamentals"]
+    techStack: ["HTML5", "CSS3 / SCSS", "JavaScript", "Responsive Design", "UI/UX"]
   }
 ];

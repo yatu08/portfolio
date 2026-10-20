@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { 
-  Sparkles, 
-  ArrowUp, 
-  RotateCcw, 
-  ChevronDown,
-  FileText
-} from 'lucide-react';
+  LuSparkles as Sparkles, 
+  LuArrowUp as ArrowUp, 
+  LuRotateCcw as RotateCcw, 
+  LuChevronDown as ChevronDown,
+  LuFileText as FileText
+} from 'react-icons/lu';
 import { profileData } from '../data/profile';
 import { experienceList } from '../data/experience';
 import { projectsList } from '../data/projects';
@@ -72,7 +72,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onOpenResume }) => {
 
     if (q.includes('experience') || q.includes('softobiz') || q.includes('webx') || q.includes('job') || q.includes('work') || q.includes('company') || q.includes('journey')) {
       const exps = experienceList.map(e => `• **${e.role}** at **${e.company}** (${e.period}): ${e.responsibilities[0]}`).join('\n\n');
-      return `Yatin has over **${profileData.experienceYears} years of verified industry experience** across enterprise and product engineering:\n\n${exps}\n\nHe has consistently delivered pixel-perfect Figma implementations, high-density enterprise data tables, and REST API integrations with a 99.8% crash-free track record.`;
+      return `Yatin has over **${profileData.experienceYears} years of professional frontend engineering experience**:\n\n${exps}\n\nHe specializes in Figma-to-code implementations, scalable React/Angular component architectures, and REST API integrations with clean, reactive state management.`;
     }
 
     if (q.includes('project') || q.includes('built') || q.includes('portfolio') || q.includes('app')) {
@@ -81,7 +81,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onOpenResume }) => {
     }
 
     if (q.includes('ai') || q.includes('llm') || q.includes('openai') || q.includes('streaming') || q.includes('chat')) {
-      return `Yatin has active experience integrating **AI-driven features into frontend applications** (rated at 75%):\n\n• **Streaming Chat Interfaces:** Real-time token streaming with cancel/retry support (just like this assistant!).\n• **LLM-Assisted Search:** Semantic searching and predictive prompt recommendations.\n• **REST API Integration:** Connecting OpenAI, Claude, and internal LLM microservices with robust error handling.\n• **Predictive UX Workflows:** Smart autocomplete, markdown rendering, and responsive generative UI patterns.`;
+      return `Yatin has active experience integrating **AI-driven features into frontend applications**:\n\n• **Streaming Chat Interfaces:** Real-time token streaming with cancel/retry support (like this assistant).\n• **LLM-Assisted Search:** Semantic searching and predictive prompt recommendations.\n• **REST API Integration:** Connecting OpenAI, Claude, and internal LLM endpoints with robust error handling.\n• **Predictive UX Workflows:** Smart autocomplete, markdown rendering, and responsive generative UI patterns.`;
     }
 
     if (q.includes('hire') || q.includes('contact') || q.includes('email') || q.includes('reach') || q.includes('interview') || q.includes('availab')) {

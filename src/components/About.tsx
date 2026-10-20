@@ -1,10 +1,10 @@
 import React from 'react';
 import { 
-  Code2, 
-  Boxes, 
-  Layout, 
-  Gauge
-} from 'lucide-react';
+  LuCodeXml as Code2, 
+  LuBoxes as Boxes, 
+  LuLayoutDashboard as Layout, 
+  LuGauge as Gauge
+} from 'react-icons/lu';
 import { profileData } from '../data/profile';
 
 export const About: React.FC = () => {

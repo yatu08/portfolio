@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { Sun, Moon, Menu, X, ArrowUpRight, ArrowLeft, Sparkles } from 'lucide-react';
+import { 
+  LuSun as Sun, 
+  LuMoon as Moon, 
+  LuMenu as Menu, 
+  LuX as X, 
+  LuArrowUpRight as ArrowUpRight, 
+  LuArrowLeft as ArrowLeft, 
+  LuSparkles as Sparkles 
+} from 'react-icons/lu';
 
 interface NavbarProps {
   theme: 'dark' | 'light';

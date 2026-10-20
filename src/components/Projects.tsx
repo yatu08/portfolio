@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, ShieldCheck } from 'lucide-react';
+import { 
+  LuArrowUpRight as ArrowUpRight, 
+  LuShieldCheck as ShieldCheck 
+} from 'react-icons/lu';
 import { projectsList } from '../data/projects';
 import { Project } from '../types';
 import { ProjectModal } from './ProjectModal';

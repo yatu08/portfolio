@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowUp } from 'lucide-react';
+import { LuArrowUp as ArrowUp } from 'react-icons/lu';
 
 export const BackToTop: React.FC = () => {
   const [visible, setVisible] = useState(false);
