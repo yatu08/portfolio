@@ -17,7 +17,7 @@ export const About: React.FC = () => {
 
   return (
     <section id="about" className="pt-8 sm:pt-10 pb-20 sm:pb-24 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Section Header */}
         <div className="mb-3">
           <span className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold">
@@ -25,14 +25,14 @@ export const About: React.FC = () => {
           </span>
         </div>
 
-        <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground max-w-3xl">
+        <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground max-w-3xl break-words">
           Engineering intuitive, high-performance <span className="text-gradient">interfaces</span>
         </h2>
 
         {/* Narrative & Highlights */}
-        <div className="grid lg:grid-cols-12 gap-12 mt-12 items-start">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 mt-10 sm:mt-12 items-start min-w-0 w-full">
           {/* Detailed Narrative */}
-          <div className="lg:col-span-7 space-y-5 text-muted-foreground text-base sm:text-lg leading-relaxed">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-muted-foreground text-sm sm:text-lg leading-relaxed min-w-0 break-words">
             {profileData.aboutDetailed.map((paragraph, idx) => (
               <p key={idx} className="leading-relaxed">
                 {paragraph}
@@ -41,11 +41,11 @@ export const About: React.FC = () => {
           </div>
 
           {/* Core Philosophy Cards */}
-          <div className="lg:col-span-5 grid sm:grid-cols-2 gap-4">
+          <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 min-w-0 w-full">
             {profileData.coreValues.map((val, idx) => (
               <div
                 key={idx}
-                className="glass rounded-2xl p-5 border border-border hover:border-foreground/30 hover:shadow-spotlight transition-all duration-200 group"
+                className="glass rounded-2xl p-4 sm:p-5 border border-border hover:border-foreground/30 hover:shadow-spotlight transition-all duration-200 group min-w-0"
               >
                 <div className="h-10 w-10 rounded-xl bg-card border border-border shadow-subtle flex items-center justify-center group-hover:border-foreground/40 transition-colors">
                   {iconMap[val.icon] || <Code2 className="h-4 w-4 text-foreground" strokeWidth={1.75} />}

@@ -13,8 +13,8 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="border-t border-border py-12 mt-12 bg-background">
-      <div className="max-w-6xl mx-auto px-6">
+    <footer className="border-t border-border py-10 sm:py-12 mt-12 bg-background overflow-hidden w-full">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           {/* Copyright & Brand */}
           <div className="flex flex-col items-center sm:items-start gap-1">

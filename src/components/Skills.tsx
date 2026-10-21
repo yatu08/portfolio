@@ -129,27 +129,27 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
       {/* Delicate Particle Canvas */}
       <ParticleCanvas />
       
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <div className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold">
               02 / Capabilities
             </div>
-            <h2 className="mt-3 text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground">
+            <h2 className="mt-3 text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground break-words">
               Skills &amp; <span className="text-gradient">Toolbox</span>
             </h2>
           </div>
 
           {/* Category Filter Tabs */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl glass border border-border">
+          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl glass border border-border min-w-0">
             <button
               type="button"
               onClick={() => {
                 setSelectedCategory('All');
                 setShowAllInAllView(false);
               }}
-              className={`text-xs px-3.5 py-1.5 rounded-lg font-mono transition-all ${
+              className={`text-xs px-3 sm:px-3.5 py-1.5 rounded-lg font-mono whitespace-nowrap transition-all ${
                 selectedCategory === 'All'
                   ? 'bg-foreground text-background font-medium'
                   : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
@@ -162,7 +162,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
                 key={cat}
                 type="button"
                 onClick={() => setSelectedCategory(cat)}
-                className={`text-xs px-3.5 py-1.5 rounded-lg font-mono transition-all ${
+                className={`text-xs px-3 sm:px-3.5 py-1.5 rounded-lg font-mono whitespace-nowrap transition-all ${
                   selectedCategory === cat
                     ? 'bg-foreground text-background font-medium'
                     : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
@@ -175,7 +175,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-12 gap-10 mt-14 items-start">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 mt-10 sm:mt-14 items-start min-w-0 w-full">
           {/* Left Column: Skill Bars in a Compact 2-Column Grid */}
           <div className="lg:col-span-6">
             <div className="grid sm:grid-cols-2 gap-2.5">

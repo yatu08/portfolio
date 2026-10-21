@@ -38,11 +38,12 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-2 h-8 px-3.5 rounded-lg bg-foreground text-background text-xs font-medium hover:opacity-90 transition shadow-subtle"
+              className="inline-flex items-center gap-1.5 sm:gap-2 h-8 px-2.5 sm:px-3.5 rounded-lg bg-foreground text-background text-xs font-medium hover:opacity-90 transition shadow-subtle whitespace-nowrap"
               title="Print or Save as PDF"
             >
               <Printer className="h-3.5 w-3.5" strokeWidth={1.75} />
-              <span>Print / Save PDF</span>
+              <span className="hidden sm:inline">Print / Save PDF</span>
+              <span className="sm:hidden">Print</span>
             </button>
             <button
               onClick={onClose}

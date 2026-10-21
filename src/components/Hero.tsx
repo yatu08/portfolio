@@ -98,9 +98,9 @@ const engineer: FrontendDeveloper = {
       {/* Background Architectural Grid & Gentle Ambient Vignette */}
       <div className="absolute inset-0 -z-10 grid-bg opacity-40 pointer-events-none" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-background/60 to-background pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-b from-foreground/[0.04] to-transparent rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[320px] sm:w-[700px] h-[250px] sm:h-[350px] bg-gradient-to-b from-foreground/[0.04] to-transparent rounded-full blur-3xl pointer-events-none -z-10 max-w-full" />
 
-      <div className="max-w-6xl mx-auto px-6 w-full">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Availability Badge */}
         <div className="inline-flex items-center gap-2.5 glass rounded-lg px-3.5 py-1.5 text-xs sm:text-[13px] font-mono mb-8 border border-border shadow-subtle hover:border-foreground/30 transition-colors">
           <span className="relative flex h-2 w-2">
@@ -111,22 +111,22 @@ const engineer: FrontendDeveloper = {
         </div>
 
         {/* Main Grid: Left copy, Right architectural developer card */}
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-w-0 w-full">
+          <div className="lg:col-span-7 min-w-0 w-full">
             {/* Main Headline */}
-            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.04] tracking-tight">
+            <h1 className="font-display text-3xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] sm:leading-[1.04] tracking-tight break-words">
               Hi, I'm <span className="text-gradient">{profileData.name}</span>
             </h1>
 
             {/* Sub-headline: Clear Role Definition */}
-            <div className="mt-3.5 text-xl sm:text-2xl font-display font-semibold text-foreground/90 tracking-tight flex items-center gap-2 flex-wrap">
+            <div className="mt-3 sm:mt-3.5 text-lg sm:text-2xl font-display font-semibold text-foreground/90 tracking-tight flex items-center gap-1.5 sm:gap-2 flex-wrap">
               <span>Frontend Developer</span>
               <span className="text-muted-foreground/50 font-light">·</span>
-              <span className="text-muted-foreground font-normal text-lg sm:text-xl">React, Angular &amp; Next.js</span>
+              <span className="text-muted-foreground font-normal text-base sm:text-xl">React, Angular &amp; Next.js</span>
             </div>
 
             {/* Professional Summary */}
-            <p className="mt-6 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-5 sm:mt-6 max-w-2xl text-sm sm:text-lg text-muted-foreground leading-relaxed break-words">
               Frontend Developer with <strong className="text-foreground font-semibold">{profileData.experienceYears} years of professional experience</strong> building 
               responsive, scalable, and user-friendly web applications with <strong className="text-foreground font-semibold">React.js</strong>, <strong className="text-foreground font-semibold">Angular</strong>, <strong className="text-foreground font-semibold">Next.js</strong>, 
               and <strong className="text-foreground font-semibold">TypeScript</strong>. Specializing in turning complex Figma designs into pixel-perfect, accessible interfaces, 
@@ -134,11 +134,11 @@ const engineer: FrontendDeveloper = {
             </p>
 
             {/* Quick Skills Badges */}
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-5 sm:mt-6 flex flex-wrap gap-1.5 sm:gap-2">
               {quickSkills.map((skill) => (
                 <span
                   key={skill}
-                  className="text-xs sm:text-[13px] font-mono px-3 py-1 rounded-lg border border-border bg-card/80 text-foreground font-medium hover:border-foreground/40 transition shadow-subtle"
+                  className="text-xs sm:text-[13px] font-mono px-2.5 sm:px-3 py-1 rounded-lg border border-border bg-card/80 text-foreground font-medium hover:border-foreground/40 transition shadow-subtle"
                 >
                   {skill}
                 </span>
@@ -146,11 +146,11 @@ const engineer: FrontendDeveloper = {
             </div>
 
             {/* Action CTAs */}
-            <div className="mt-9 flex flex-wrap items-center gap-3">
+            <div className="mt-7 sm:mt-9 flex flex-wrap items-center gap-2.5 sm:gap-3">
               {/* Primary CTA: Classy Solid Button */}
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-2 h-11 px-6 rounded-xl bg-foreground text-background font-medium hover:opacity-90 transition-all duration-150 active:scale-95 shadow-subtle text-sm"
+                className="group inline-flex items-center gap-2 h-11 px-6 rounded-xl bg-foreground text-background font-medium hover:opacity-90 transition-all duration-150 active:scale-95 shadow-subtle text-sm whitespace-nowrap"
               >
                 <span>Hire me</span>
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.75} />
@@ -159,7 +159,7 @@ const engineer: FrontendDeveloper = {
               {/* Secondary CTA: Clean Outline */}
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 h-11 px-6 rounded-xl border border-border bg-card/60 hover:bg-muted text-foreground transition-all duration-150 font-medium active:scale-95 text-sm"
+                className="inline-flex items-center gap-2 h-11 px-6 rounded-xl border border-border bg-card/60 hover:bg-muted text-foreground transition-all duration-150 font-medium active:scale-95 text-sm whitespace-nowrap"
               >
                 <span>View Projects</span>
               </a>
@@ -168,7 +168,7 @@ const engineer: FrontendDeveloper = {
               <button
                 type="button"
                 onClick={onOpenResume}
-                className="inline-flex items-center gap-2 h-11 px-6 rounded-xl border border-border bg-card/60 hover:bg-muted text-foreground transition-all duration-150 font-medium active:scale-95 text-sm"
+                className="inline-flex items-center gap-2 h-11 px-6 rounded-xl border border-border bg-card/60 hover:bg-muted text-foreground transition-all duration-150 font-medium active:scale-95 text-sm whitespace-nowrap"
               >
                 <Download className="h-3.5 w-3.5 text-muted-foreground" strokeWidth={1.75} />
                 <span>Resume</span>
@@ -176,13 +176,13 @@ const engineer: FrontendDeveloper = {
             </div>
 
             {/* Verified Social Links */}
-            <div className="mt-9 flex flex-wrap items-center gap-2.5 text-muted-foreground">
+            <div className="mt-7 sm:mt-9 flex flex-wrap items-center gap-2.5 text-muted-foreground">
               <a
                 href={profileData.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"
-                className="h-10 w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground hover:bg-secondary/70 transition-all shadow-subtle text-foreground/80"
+                className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground hover:bg-secondary/70 transition-all shadow-subtle text-foreground/80 shrink-0"
                 title="GitHub"
               >
                 <Github className="h-4 w-4" strokeWidth={1.75} />
@@ -192,7 +192,7 @@ const engineer: FrontendDeveloper = {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
-                className="h-10 w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground hover:bg-secondary/70 transition-all shadow-subtle text-foreground/80"
+                className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground hover:bg-secondary/70 transition-all shadow-subtle text-foreground/80 shrink-0"
                 title="LinkedIn"
               >
                 <Linkedin className="h-4 w-4" strokeWidth={1.75} />
@@ -200,29 +200,29 @@ const engineer: FrontendDeveloper = {
               <a
                 href={`mailto:${profileData.email}`}
                 aria-label="Send Email"
-                className="h-10 w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground hover:bg-secondary/70 transition-all shadow-subtle text-foreground/80"
+                className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground hover:bg-secondary/70 transition-all shadow-subtle text-foreground/80 shrink-0"
                 title="Send Email"
               >
                 <Mail className="h-4 w-4" strokeWidth={1.75} />
               </a>
-              <span className="text-xs sm:text-[13px] font-mono text-foreground/80 pl-2.5 border-l border-border font-medium">
+              <span className="text-xs sm:text-[13px] font-mono text-foreground/80 pl-2 sm:pl-2.5 sm:border-l sm:border-border font-medium break-all">
                 {profileData.email}
               </span>
             </div>
           </div>
 
           {/* Right Column: Architectural Developer Window */}
-          <div className="lg:col-span-5">
-            <div className="glass rounded-2xl p-5 border border-border shadow-card hover:shadow-spotlight transition-all duration-300 overflow-hidden">
+          <div className="lg:col-span-5 min-w-0 w-full mt-6 lg:mt-0">
+            <div className="glass rounded-2xl p-3.5 sm:p-5 border border-border shadow-card hover:shadow-spotlight transition-all duration-300 overflow-hidden w-full min-w-0">
               {/* Window Title Bar */}
               <div className="flex items-center justify-between pb-3 mb-3 border-b border-border/70">
-                <div className="flex items-center gap-2">
-                  <span className="h-3 w-3 rounded-full bg-rose-500/80 inline-block border border-rose-600/30" />
-                  <span className="h-3 w-3 rounded-full bg-amber-500/80 inline-block border border-amber-600/30" />
-                  <span className="h-3 w-3 rounded-full bg-emerald-500/80 inline-block border border-emerald-600/30" />
-                  <span className="text-xs font-mono text-foreground/90 ml-2 flex items-center gap-1.5 font-medium">
-                    <Terminal className="h-3.5 w-3.5 text-foreground/70" strokeWidth={1.75} />
-                    developer-profile.ts
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <span className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-rose-500/80 inline-block border border-rose-600/30" />
+                  <span className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-amber-500/80 inline-block border border-amber-600/30" />
+                  <span className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-emerald-500/80 inline-block border border-emerald-600/30" />
+                  <span className="text-xs font-mono text-foreground/90 ml-1.5 sm:ml-2 flex items-center gap-1.5 font-medium truncate">
+                    <Terminal className="h-3.5 w-3.5 text-foreground/70 shrink-0" strokeWidth={1.75} />
+                    <span className="truncate">developer-profile.ts</span>
                   </span>
                 </div>
 
@@ -230,7 +230,7 @@ const engineer: FrontendDeveloper = {
                 <button
                   type="button"
                   onClick={handleCopyCode}
-                  className="text-xs font-mono text-foreground/80 hover:text-foreground flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-secondary/80 border border-border hover:bg-muted transition"
+                  className="text-xs font-mono text-foreground/80 hover:text-foreground flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-secondary/80 border border-border hover:bg-muted transition shrink-0"
                   title="Copy code"
                 >
                   {copiedCode ? (
@@ -248,51 +248,51 @@ const engineer: FrontendDeveloper = {
               </div>
 
               {/* Editor Tabs Row */}
-              <div className="grid grid-cols-3 gap-1.5 p-1 rounded-xl bg-secondary/60 border border-border/80 mb-3.5">
+              <div className="grid grid-cols-3 gap-1 p-1 rounded-xl bg-secondary/60 border border-border/80 mb-3.5 min-w-0">
                 <button
                   type="button"
                   onClick={() => setActiveTab('engineer')}
-                  className={`flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-xs font-mono transition-all duration-150 ${
+                  className={`flex items-center justify-center gap-1 sm:gap-1.5 py-1.5 px-1.5 sm:px-2 rounded-lg text-[11px] sm:text-xs font-mono transition-all duration-150 min-w-0 ${
                     activeTab === 'engineer'
                       ? 'bg-foreground text-background font-semibold shadow-sm'
                       : 'text-muted-foreground hover:text-foreground hover:bg-card/60'
                   }`}
                 >
-                  <Terminal className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
+                  <Terminal className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" strokeWidth={1.75} />
                   <span className="truncate">engineer.ts</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveTab('stack')}
-                  className={`flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-xs font-mono transition-all duration-150 ${
+                  className={`flex items-center justify-center gap-1 sm:gap-1.5 py-1.5 px-1.5 sm:px-2 rounded-lg text-[11px] sm:text-xs font-mono transition-all duration-150 min-w-0 ${
                     activeTab === 'stack'
                       ? 'bg-foreground text-background font-semibold shadow-sm'
                       : 'text-muted-foreground hover:text-foreground hover:bg-card/60'
                   }`}
                 >
-                  <Code2 className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
+                  <Code2 className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" strokeWidth={1.75} />
                   <span className="truncate">stack.json</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveTab('highlights')}
-                  className={`flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-xs font-mono transition-all duration-150 ${
+                  className={`flex items-center justify-center gap-1 sm:gap-1.5 py-1.5 px-1.5 sm:px-2 rounded-lg text-[11px] sm:text-xs font-mono transition-all duration-150 min-w-0 ${
                     activeTab === 'highlights'
                       ? 'bg-foreground text-background font-semibold shadow-sm'
                       : 'text-muted-foreground hover:text-foreground hover:bg-card/60'
                   }`}
                 >
-                  <FileText className="h-3.5 w-3.5 shrink-0" strokeWidth={1.75} />
+                  <FileText className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" strokeWidth={1.75} />
                   <span className="truncate">career.md</span>
                 </button>
               </div>
 
               {/* Code Snippet View: Rich, High-Contrast Authentic Syntax Highlighting with Line Numbers */}
-              <div className="rounded-xl p-4 sm:p-5 bg-card/90 dark:bg-card/70 border border-border shadow-inner font-mono text-[13px] sm:text-[13.5px] leading-[1.75] overflow-x-auto min-h-[260px]">
+              <div className="rounded-xl p-3 sm:p-5 bg-card/90 dark:bg-card/70 border border-border shadow-inner font-mono text-[12px] sm:text-[13.5px] leading-[1.75] overflow-x-auto min-h-[260px] w-full min-w-0">
                 {activeTab === 'engineer' && (
-                  <div className="flex">
+                  <div className="flex min-w-0">
                     {/* Line numbers column */}
-                    <div className="select-none pr-3.5 mr-3.5 text-right text-zinc-400/80 dark:text-zinc-600 font-mono text-[13px] sm:text-[13.5px] leading-[1.75] border-r border-border/60">
+                    <div className="select-none pr-2.5 sm:pr-3.5 mr-2.5 sm:mr-3.5 text-right text-zinc-400/80 dark:text-zinc-600 font-mono text-[12px] sm:text-[13.5px] leading-[1.75] border-r border-border/60 shrink-0">
                       <div>1</div>
                       <div>2</div>
                       <div>3</div>
@@ -308,8 +308,8 @@ const engineer: FrontendDeveloper = {
                       <div>13</div>
                     </div>
                     {/* Code content column */}
-                    <div className="flex-1 overflow-x-auto">
-                      <pre>
+                    <div className="flex-1 overflow-x-auto min-w-0">
+                      <pre className="overflow-x-auto">
                         <code>
                           <span className="text-purple-600 dark:text-purple-400 font-semibold">const</span>{' '}
                           <span className="text-zinc-900 dark:text-zinc-100 font-bold">engineer</span>:{' '}
@@ -339,9 +339,9 @@ const engineer: FrontendDeveloper = {
                 )}
 
                 {activeTab === 'stack' && (
-                  <div className="flex">
+                  <div className="flex min-w-0">
                     {/* Line numbers column */}
-                    <div className="select-none pr-3.5 mr-3.5 text-right text-zinc-400/80 dark:text-zinc-600 font-mono text-[13px] sm:text-[13.5px] leading-[1.75] border-r border-border/60">
+                    <div className="select-none pr-2.5 sm:pr-3.5 mr-2.5 sm:mr-3.5 text-right text-zinc-400/80 dark:text-zinc-600 font-mono text-[12px] sm:text-[13.5px] leading-[1.75] border-r border-border/60 shrink-0">
                       <div>1</div>
                       <div>2</div>
                       <div>3</div>
@@ -352,8 +352,8 @@ const engineer: FrontendDeveloper = {
                       <div>8</div>
                     </div>
                     {/* Code content column */}
-                    <div className="flex-1 overflow-x-auto">
-                      <pre>
+                    <div className="flex-1 overflow-x-auto min-w-0">
+                      <pre className="overflow-x-auto">
                         <code>
                           <span className="text-zinc-700 dark:text-zinc-300 font-medium">{`{\n`}</span>
                           {'  '}<span className="text-sky-700 dark:text-sky-400 font-semibold">"core"</span>:{' '}<span className="text-zinc-700 dark:text-zinc-300">[</span><span className="text-emerald-700 dark:text-emerald-400 font-medium">"React 18"</span>, <span className="text-emerald-700 dark:text-emerald-400 font-medium">"Angular 17"</span>, <span className="text-emerald-700 dark:text-emerald-400 font-medium">"Next.js 14"</span><span className="text-zinc-700 dark:text-zinc-300">]</span>,<br />
@@ -370,26 +370,26 @@ const engineer: FrontendDeveloper = {
                 )}
 
                 {activeTab === 'highlights' && (
-                  <div className="space-y-3 font-sans text-[13px] sm:text-sm py-1">
+                  <div className="space-y-3 font-sans text-[12px] sm:text-sm py-1 min-w-0">
                     <div className="font-semibold text-foreground font-mono text-xs mb-3 uppercase tracking-wider flex items-center gap-2 pb-2 border-b border-border/50">
-                      <Sparkles className="h-3.5 w-3.5 text-foreground" strokeWidth={2} />
-                      <span>Verified Track Record &amp; Impact</span>
+                      <Sparkles className="h-3.5 w-3.5 text-foreground shrink-0" strokeWidth={2} />
+                      <span className="truncate">Verified Track Record &amp; Impact</span>
                     </div>
                     <ul className="space-y-2.5 text-foreground/90 font-sans">
-                      <li className="flex items-start gap-2.5">
-                        <span className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                      <li className="flex items-start gap-2 sm:gap-2.5">
+                        <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
                         <span className="leading-relaxed"><strong className="text-foreground font-semibold">4+ Years</strong> professional experience in frontend development</span>
                       </li>
-                      <li className="flex items-start gap-2.5">
-                        <span className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                      <li className="flex items-start gap-2 sm:gap-2.5">
+                        <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
                         <span className="leading-relaxed"><strong className="text-foreground font-semibold">UI Developer at Softobiz</strong> (React, Angular &amp; Next.js)</span>
                       </li>
-                      <li className="flex items-start gap-2.5">
-                        <span className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                      <li className="flex items-start gap-2 sm:gap-2.5">
+                        <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
                         <span className="leading-relaxed"><strong className="text-foreground font-semibold">6 Months at WebXTechnology</strong> as Web Designer</span>
                       </li>
-                      <li className="flex items-start gap-2.5">
-                        <span className="h-2 w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                      <li className="flex items-start gap-2 sm:gap-2.5">
+                        <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-emerald-500 mt-2 shrink-0" />
                         <span className="leading-relaxed">Pixel-perfect Figma conversion &amp; <strong className="text-foreground font-semibold">AI streaming interfaces</strong></span>
                       </li>
                     </ul>
@@ -410,16 +410,16 @@ const engineer: FrontendDeveloper = {
         </div>
 
         {/* Professional Statistics Cards */}
-        <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-4">
+        <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 w-full min-w-0">
           {profileData.stats.map((stat, idx) => (
             <div
               key={idx}
-              className="glass rounded-2xl p-4 sm:p-5 border border-border shadow-subtle hover:border-foreground/30 transition-all duration-200"
+              className="glass rounded-2xl p-3.5 sm:p-5 border border-border shadow-subtle hover:border-foreground/30 transition-all duration-200 min-w-0"
             >
-              <div className="text-3xl sm:text-4xl font-display font-bold text-foreground">
+              <div className="text-2xl sm:text-4xl font-display font-bold text-foreground">
                 {stat.value}
               </div>
-              <div className="text-xs text-muted-foreground mt-1.5 font-medium">
+              <div className="text-[11px] sm:text-xs text-muted-foreground mt-1 sm:mt-1.5 font-medium leading-tight">
                 {stat.label}
               </div>
             </div>
@@ -427,7 +427,7 @@ const engineer: FrontendDeveloper = {
         </div>
 
         {/* Enterprise Competencies & Tech Stack Marquee - seamlessly covers transition gap */}
-        <div className="mt-8 pt-6 border-t border-border/60">
+        <div className="mt-8 pt-6 border-t border-border/60 w-full min-w-0 overflow-hidden">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono text-muted-foreground mb-3">
             <span className="flex items-center gap-2 text-foreground font-semibold uppercase tracking-wider text-[11px]">
               <Sparkles className="h-3.5 w-3.5 text-foreground" strokeWidth={1.75} />
@@ -438,17 +438,17 @@ const engineer: FrontendDeveloper = {
             </span>
           </div>
 
-          <div className="relative overflow-hidden rounded-2xl border border-border/80 glass py-3">
-            <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+          <div className="relative overflow-hidden rounded-2xl border border-border/80 glass py-3 w-full min-w-0">
+            <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-12 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-12 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
             
-            <div className="animate-marquee flex items-center gap-4 sm:gap-6 whitespace-nowrap">
+            <div className="animate-marquee flex items-center gap-3 sm:gap-6 whitespace-nowrap">
               {techStackPills.concat(techStackPills).map((item, idx) => (
                 <div
                   key={idx}
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-card/70 border border-border/70 text-xs font-mono text-foreground font-medium shadow-subtle hover:border-foreground/40 transition shrink-0"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-card/70 border border-border/70 text-[11px] sm:text-xs font-mono text-foreground font-medium shadow-subtle hover:border-foreground/40 transition shrink-0"
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0" />
                   <span>{item}</span>
                 </div>
               ))}

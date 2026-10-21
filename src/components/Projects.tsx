@@ -32,26 +32,26 @@ export const Projects: React.FC = () => {
   });
 
   return (
-    <section id="projects" className="py-28 relative">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className="py-20 sm:py-28 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Section Header */}
-        <div className="flex items-end justify-between flex-wrap gap-6">
+        <div className="flex items-start sm:items-end justify-between flex-wrap gap-4 sm:gap-6">
           <div>
             <div className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold">
               03 / Selected Works
             </div>
-            <h2 className="mt-3 text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground">
+            <h2 className="mt-3 text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground break-words">
               Featured <span className="text-gradient">Projects</span>
             </h2>
           </div>
-          <div className="flex items-center gap-2 glass px-3.5 py-1.5 rounded-xl border border-border text-xs text-muted-foreground">
+          <div className="flex items-center gap-2 glass px-3.5 py-1.5 rounded-xl border border-border text-xs text-muted-foreground max-w-full">
             <ShieldCheck className="h-3.5 w-3.5 text-foreground shrink-0" strokeWidth={1.75} />
-            <span>Enterprise systems &amp; client IP protected under NDA.</span>
+            <span className="truncate">Enterprise systems &amp; client IP protected under NDA.</span>
           </div>
         </div>
 
         {/* Filter Badges */}
-        <div className="mt-10 flex flex-wrap items-center gap-2">
+        <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-2 min-w-0">
           {filterOptions.map((filter) => {
             const count = getCount(filter);
             const isActive = activeFilter === filter;
@@ -60,7 +60,7 @@ export const Projects: React.FC = () => {
                 key={filter}
                 type="button"
                 onClick={() => setActiveFilter(filter)}
-                className={`text-xs px-3.5 py-1.5 rounded-lg font-mono transition-all flex items-center gap-2 ${
+                className={`text-xs px-3.5 py-1.5 rounded-lg font-mono transition-all flex items-center gap-2 whitespace-nowrap ${
                   isActive
                     ? 'bg-foreground text-background font-medium'
                     : 'glass border border-border text-muted-foreground hover:text-foreground hover:bg-muted/40'

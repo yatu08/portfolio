@@ -113,7 +113,7 @@ export const ComponentSandbox: React.FC<ComponentSandboxProps> = ({ onBack }) =>
 
   const codeSnippets = {
     button: `import React, { useState } from 'react';
-import { Loader2, ArrowRight } from 'lucide-react';
+import { LuLoader2, LuArrowRight } from 'react-icons/lu';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'solid' | 'framed' | 'satin' | 'destructive';
@@ -141,14 +141,14 @@ export const Button: React.FC<ButtonProps> = ({
       className={\`inline-flex items-center justify-center gap-2 h-10 px-5 rounded-xl text-sm font-medium transition-all active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed \${variantStyles[variant]} \${className}\`}
       {...props}
     >
-      {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
+      {isLoading ? <LuLoader2 className="h-4 w-4 animate-spin" /> : null}
       {children}
     </button>
   );
 };`,
 
     toast: `import React, { useState, useEffect } from 'react';
-import { CheckCircle2, AlertCircle, Info, X } from 'lucide-react';
+import { LuCheckCircle2, LuAlertCircle, LuInfo, LuX } from 'react-icons/lu';
 
 export interface ToastItem {
   id: string;
@@ -166,9 +166,9 @@ export const ToastNotification: React.FC<{
   }, [toast.id, onDismiss]);
 
   const icons = {
-    success: <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />,
-    error: <AlertCircle className="h-4 w-4 text-rose-500 shrink-0 mt-0.5" />,
-    info: <Info className="h-4 w-4 text-sky-500 shrink-0 mt-0.5" />
+    success: <LuCheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />,
+    error: <LuAlertCircle className="h-4 w-4 text-rose-500 shrink-0 mt-0.5" />,
+    info: <LuInfo className="h-4 w-4 text-sky-500 shrink-0 mt-0.5" />
   };
 
   return (
@@ -178,14 +178,14 @@ export const ToastNotification: React.FC<{
         {toast.message}
       </p>
       <button onClick={() => onDismiss(toast.id)} className="text-muted-foreground hover:text-foreground">
-        <X className="h-3.5 w-3.5" />
+        <LuX className="h-3.5 w-3.5" />
       </button>
     </div>
   );
 };`,
 
     metric: `import React from 'react';
-import { TrendingUp } from 'lucide-react';
+import { LuTrendingUp } from 'react-icons/lu';
 
 interface MetricCardProps {
   label: string;
@@ -200,7 +200,7 @@ export const MetricCard: React.FC<MetricCardProps> = ({ label, value, trend, per
       <div className="flex items-center justify-between text-xs font-mono text-muted-foreground">
         <span>{label}</span>
         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold text-[11px]">
-          <TrendingUp className="h-3 w-3" />
+          <LuTrendingUp className="h-3 w-3" />
           {trend}
         </span>
       </div>
@@ -215,7 +215,7 @@ export const MetricCard: React.FC<MetricCardProps> = ({ label, value, trend, per
 };`,
 
     autocomplete: `import React, { useState } from 'react';
-import { X, Search } from 'lucide-react';
+import { LuX, LuSearch } from 'react-icons/lu';
 
 export const AutocompleteTagSelector: React.FC = () => {
   const [selected, setSelected] = useState<string[]>(['React 18', 'TypeScript']);
@@ -233,7 +233,7 @@ export const AutocompleteTagSelector: React.FC = () => {
           <span key={item} className="inline-flex items-center gap-1.5 text-xs font-mono px-2.5 py-1 rounded-lg bg-secondary text-foreground border border-border">
             {item}
             <button onClick={() => setSelected(selected.filter(s => s !== item))}>
-              <X className="h-3 w-3 hover:text-foreground" />
+              <LuX className="h-3 w-3 hover:text-foreground" />
             </button>
           </span>
         ))}
@@ -262,7 +262,7 @@ export const AutocompleteTagSelector: React.FC = () => {
 };`,
 
     accordion: `import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { LuChevronDown } from 'react-icons/lu';
 
 interface AccordionItem {
   title: string;
@@ -283,7 +283,7 @@ export const Accordion: React.FC<{ items: AccordionItem[] }> = ({ items }) => {
               className="w-full px-4 py-3 flex items-center justify-between text-left text-sm font-semibold text-foreground hover:bg-secondary/40 transition"
             >
               <span>{item.title}</span>
-              <ChevronDown className={\`h-4 w-4 transition-transform duration-200 \${isOpen ? 'rotate-180' : ''}\`} />
+              <LuChevronDown className={\`h-4 w-4 transition-transform duration-200 \${isOpen ? 'rotate-180' : ''}\`} />
             </button>
             {isOpen && (
               <div className="px-4 pb-3 pt-1 text-xs text-muted-foreground leading-relaxed border-t border-border/50">
@@ -323,7 +323,7 @@ export const SegmentedControl: React.FC = () => {
 };`,
 
     streaming: `import React, { useState, useEffect } from 'react';
-import { Sparkles } from 'lucide-react';
+import { LuSparkles } from 'react-icons/lu';
 
 export const AIStreamingMessage: React.FC<{ prompt: string }> = ({ prompt }) => {
   const [output, setOutput] = useState('');
@@ -347,7 +347,7 @@ export const AIStreamingMessage: React.FC<{ prompt: string }> = ({ prompt }) => 
   return (
     <div className="glass rounded-2xl p-4 border border-border shadow-subtle flex gap-3">
       <div className="h-7 w-7 rounded-lg bg-foreground text-background flex items-center justify-center shrink-0">
-        <Sparkles className="h-3.5 w-3.5" />
+        <LuSparkles className="h-3.5 w-3.5" />
       </div>
       <div className="text-xs text-foreground font-mono leading-relaxed">
         {output}
@@ -358,7 +358,7 @@ export const AIStreamingMessage: React.FC<{ prompt: string }> = ({ prompt }) => 
 };`,
 
     modal: `import React, { useEffect } from 'react';
-import { X } from 'lucide-react';
+import { LuX } from 'react-icons/lu';
 
 export const DialogModal: React.FC<{
   isOpen: boolean;
@@ -449,7 +449,7 @@ export const DialogModal: React.FC<{
                   key={cat}
                   type="button"
                   onClick={() => setActiveCategory(cat)}
-                  className={`text-xs font-mono px-3.5 py-1.5 rounded-xl transition-all ${
+                  className={`text-xs font-mono px-3.5 py-1.5 rounded-xl whitespace-nowrap transition-all ${
                     activeCategory === cat
                       ? 'bg-foreground text-background font-semibold shadow-subtle'
                       : 'border border-border glass text-muted-foreground hover:text-foreground hover:bg-secondary'
@@ -470,20 +470,20 @@ export const DialogModal: React.FC<{
           {(activeCategory === 'All' || activeCategory === 'Actions') && (
             <div className="glass rounded-2xl border border-border shadow-card overflow-hidden">
               {/* Card Header */}
-              <div className="p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
-                <div>
+              <div className="p-4 sm:p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
+                <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Primitive 01</span>
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-foreground/10 text-foreground font-semibold">Actions</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-foreground mt-1">Button System</h3>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Button System</h3>
                   <p className="text-xs text-muted-foreground">Tactile states, spinner reactivity, and variant tokens.</p>
                 </div>
-                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl">
+                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('button', 'preview')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.button === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -493,7 +493,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('button', 'code')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.button === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -504,38 +504,50 @@ export const DialogModal: React.FC<{
               </div>
 
               {/* Card Body */}
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {viewModes.button === 'preview' ? (
                   <div className="space-y-6">
                     {/* Interactive Controls */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl border border-border bg-background/50 text-xs font-mono">
-                      <div className="flex items-center gap-2">
-                        <span className="text-muted-foreground">Variant:</span>
-                        {(['solid', 'framed', 'satin', 'destructive'] as const).map(v => (
-                          <button
-                            key={v}
-                            onClick={() => setBtnVariant(v)}
-                            className={`px-2 py-0.5 rounded capitalize ${btnVariant === v ? 'bg-foreground text-background font-bold' : 'text-muted-foreground hover:text-foreground'}`}
-                          >
-                            {v}
-                          </button>
-                        ))}
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 rounded-xl border border-border bg-background/50 text-xs font-mono">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-muted-foreground whitespace-nowrap text-[11px] sm:text-xs">Variant:</span>
+                        <div className="flex flex-wrap items-center gap-1">
+                          {(['solid', 'framed', 'satin', 'destructive'] as const).map(v => (
+                            <button
+                              key={v}
+                              type="button"
+                              onClick={() => setBtnVariant(v)}
+                              className={`px-2.5 py-1 rounded-lg text-[11px] sm:text-xs font-mono whitespace-nowrap capitalize transition ${
+                                btnVariant === v
+                                  ? 'bg-foreground text-background font-bold shadow-subtle'
+                                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                              }`}
+                            >
+                              {v}
+                            </button>
+                          ))}
+                        </div>
                       </div>
                       <button
+                        type="button"
                         onClick={() => setBtnLoading(!btnLoading)}
-                        className={`px-2.5 py-1 rounded border border-border ${btnLoading ? 'bg-foreground text-background font-bold' : 'text-muted-foreground hover:text-foreground'}`}
+                        className={`px-3 py-1 rounded-lg text-[11px] sm:text-xs font-mono whitespace-nowrap border border-border transition self-start sm:self-auto ${
+                          btnLoading
+                            ? 'bg-foreground text-background font-bold shadow-subtle'
+                            : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                        }`}
                       >
                         Toggle Loading
                       </button>
                     </div>
 
                     {/* Live Render Area */}
-                    <div className="p-8 rounded-xl border border-dashed border-border flex flex-col items-center justify-center gap-4 bg-card/40 min-h-[140px]">
+                    <div className="p-6 sm:p-8 rounded-xl border border-dashed border-border flex flex-col items-center justify-center gap-4 bg-card/40 min-h-[140px]">
                       <button
                         type="button"
                         disabled={btnLoading}
                         onClick={() => setBtnClicks(c => c + 1)}
-                        className={`inline-flex items-center justify-center gap-2 h-11 px-6 rounded-xl text-xs font-mono transition-all active:scale-95 shadow-subtle ${
+                        className={`inline-flex items-center justify-center gap-2 h-11 px-6 rounded-xl text-xs font-mono whitespace-nowrap transition-all active:scale-95 shadow-subtle ${
                           btnVariant === 'solid' ? 'bg-foreground text-background font-semibold hover:opacity-90' :
                           btnVariant === 'framed' ? 'border border-foreground bg-transparent text-foreground hover:bg-secondary font-semibold' :
                           btnVariant === 'satin' ? 'bg-secondary text-foreground border border-border hover:border-foreground/40 font-semibold' :
@@ -547,7 +559,7 @@ export const DialogModal: React.FC<{
                         ) : null}
                         <span>Click Me ({btnClicks})</span>
                       </button>
-                      <span className="text-[11px] font-mono text-muted-foreground">
+                      <span className="text-[11px] font-mono text-muted-foreground text-center">
                         Current variant: <strong className="text-foreground">{btnVariant}</strong> · Active clicks: {btnClicks}
                       </span>
                     </div>
@@ -576,20 +588,20 @@ export const DialogModal: React.FC<{
           {/* ========================================================= */}
           {(activeCategory === 'All' || activeCategory === 'Feedback') && (
             <div className="glass rounded-2xl border border-border shadow-card overflow-hidden">
-              <div className="p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
-                <div>
+              <div className="p-4 sm:p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
+                <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Primitive 02</span>
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-foreground/10 text-foreground font-semibold">Feedback</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-foreground mt-1">Toast System</h3>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Toast System</h3>
                   <p className="text-xs text-muted-foreground">Auto-dismissing, animated status feedback notifications.</p>
                 </div>
-                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl">
+                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('toast', 'preview')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.toast === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -599,7 +611,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('toast', 'code')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.toast === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -609,7 +621,7 @@ export const DialogModal: React.FC<{
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {viewModes.toast === 'preview' ? (
                   <div className="space-y-4">
                     {/* Triggers */}
@@ -617,25 +629,25 @@ export const DialogModal: React.FC<{
                       <button
                         type="button"
                         onClick={() => triggerToast('success')}
-                        className="h-9 rounded-xl border border-border bg-card hover:bg-secondary text-xs font-mono text-foreground flex items-center justify-center gap-1.5 transition active:scale-95"
+                        className="h-9 px-2 rounded-xl border border-border bg-card hover:bg-secondary text-[11px] sm:text-xs font-mono text-foreground flex items-center justify-center gap-1.5 whitespace-nowrap transition active:scale-95"
                       >
-                        <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" />
+                        <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
                         <span>Success</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => triggerToast('error')}
-                        className="h-9 rounded-xl border border-border bg-card hover:bg-secondary text-xs font-mono text-foreground flex items-center justify-center gap-1.5 transition active:scale-95"
+                        className="h-9 px-2 rounded-xl border border-border bg-card hover:bg-secondary text-[11px] sm:text-xs font-mono text-foreground flex items-center justify-center gap-1.5 whitespace-nowrap transition active:scale-95"
                       >
-                        <AlertCircle className="h-3.5 w-3.5 text-rose-500" />
+                        <AlertCircle className="h-3.5 w-3.5 text-rose-500 shrink-0" />
                         <span>Error</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => triggerToast('info')}
-                        className="h-9 rounded-xl border border-border bg-card hover:bg-secondary text-xs font-mono text-foreground flex items-center justify-center gap-1.5 transition active:scale-95"
+                        className="h-9 px-2 rounded-xl border border-border bg-card hover:bg-secondary text-[11px] sm:text-xs font-mono text-foreground flex items-center justify-center gap-1.5 whitespace-nowrap transition active:scale-95"
                       >
-                        <Info className="h-3.5 w-3.5 text-sky-500" />
+                        <Info className="h-3.5 w-3.5 text-sky-500 shrink-0" />
                         <span>Info</span>
                       </button>
                     </div>
@@ -674,7 +686,7 @@ export const DialogModal: React.FC<{
                     <button
                       type="button"
                       onClick={() => handleCopyCode('toast', codeSnippets.toast)}
-                      className="absolute top-3 right-3 text-xs font-mono flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-border bg-card hover:bg-muted text-muted-foreground hover:text-foreground transition"
+                      className="absolute top-3 right-3 text-xs font-mono flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-border bg-card hover:bg-muted text-muted-foreground hover:text-foreground transition whitespace-nowrap"
                     >
                       {copiedId === 'toast' ? <Check className="h-3 w-3 text-emerald-500" /> : <Copy className="h-3 w-3" />}
                       <span>{copiedId === 'toast' ? 'Copied' : 'Copy'}</span>
@@ -693,20 +705,20 @@ export const DialogModal: React.FC<{
           {/* ========================================================= */}
           {(activeCategory === 'All' || activeCategory === 'Data') && (
             <div className="glass rounded-2xl border border-border shadow-card overflow-hidden">
-              <div className="p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
-                <div>
+              <div className="p-4 sm:p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
+                <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Primitive 03</span>
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-foreground/10 text-foreground font-semibold">Data</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-foreground mt-1">SaaS Metric Card</h3>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">SaaS Metric Card</h3>
                   <p className="text-xs text-muted-foreground">High-density data card with dynamic period switching.</p>
                 </div>
-                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl">
+                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('metric', 'preview')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.metric === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -716,7 +728,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('metric', 'code')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.metric === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -726,19 +738,20 @@ export const DialogModal: React.FC<{
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {viewModes.metric === 'preview' ? (
                   <div className="space-y-4">
                     {/* Time Window Switcher */}
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-mono text-muted-foreground">Time Window:</span>
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <span className="text-xs font-mono text-muted-foreground whitespace-nowrap">Time Window:</span>
                       <div className="inline-flex gap-1 p-1 rounded-xl border border-border bg-background/50">
                         {(['7D', '30D', '90D'] as const).map(p => (
                           <button
                             key={p}
+                            type="button"
                             onClick={() => setMetricRange(p)}
-                            className={`px-3 py-1 rounded-lg text-xs font-mono transition ${
-                              metricRange === p ? 'bg-foreground text-background font-bold' : 'text-muted-foreground hover:text-foreground'
+                            className={`px-3 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
+                              metricRange === p ? 'bg-foreground text-background font-bold shadow-subtle' : 'text-muted-foreground hover:text-foreground'
                             }`}
                           >
                             {p}
@@ -748,12 +761,12 @@ export const DialogModal: React.FC<{
                     </div>
 
                     {/* Metric Card Live Display */}
-                    <div className="glass rounded-2xl p-6 border border-border shadow-subtle hover:border-foreground/30 transition-all bg-card/60">
+                    <div className="glass rounded-2xl p-5 sm:p-6 border border-border shadow-subtle hover:border-foreground/30 transition-all bg-card/60">
                       <div className="flex items-center justify-between">
                         <span className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
                           Core Web Vitals Score
                         </span>
-                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold text-xs font-mono">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold text-xs font-mono whitespace-nowrap">
                           <TrendingUp className="h-3 w-3" />
                           {metricRange === '7D' ? '+4.2%' : metricRange === '30D' ? '+18.7%' : '+31.4%'}
                         </span>
@@ -793,20 +806,20 @@ export const DialogModal: React.FC<{
           {/* ========================================================= */}
           {(activeCategory === 'All' || activeCategory === 'Actions') && (
             <div className="glass rounded-2xl border border-border shadow-card overflow-hidden">
-              <div className="p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
-                <div>
+              <div className="p-4 sm:p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
+                <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Primitive 04</span>
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-foreground/10 text-foreground font-semibold">Inputs</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-foreground mt-1">Tag Input Selector</h3>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Tag Input Selector</h3>
                   <p className="text-xs text-muted-foreground">Filterable multiselect badge input with instant filtering.</p>
                 </div>
-                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl">
+                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('autocomplete', 'preview')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.autocomplete === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -816,7 +829,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('autocomplete', 'code')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.autocomplete === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -826,7 +839,7 @@ export const DialogModal: React.FC<{
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {viewModes.autocomplete === 'preview' ? (
                   <div className="space-y-4">
                     {/* Live Multiselect Pill Input */}
@@ -834,7 +847,7 @@ export const DialogModal: React.FC<{
                       {tags.map(tag => (
                         <span
                           key={tag}
-                          className="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1 rounded-lg bg-secondary text-foreground border border-border shadow-subtle"
+                          className="inline-flex items-center gap-1.5 text-xs font-mono px-3 py-1 rounded-lg bg-secondary text-foreground border border-border shadow-subtle whitespace-nowrap"
                         >
                           <span>{tag}</span>
                           <button
@@ -871,7 +884,7 @@ export const DialogModal: React.FC<{
                                 setTags([...tags, s]);
                                 setTagInput('');
                               }}
-                              className="text-xs font-mono px-2.5 py-1 rounded-md border border-border bg-background/50 text-muted-foreground hover:text-foreground hover:bg-secondary transition active:scale-95"
+                              className="text-xs font-mono px-2.5 py-1 rounded-md border border-border bg-background/50 text-muted-foreground hover:text-foreground hover:bg-secondary transition active:scale-95 whitespace-nowrap"
                             >
                               + {s}
                             </button>
@@ -903,20 +916,20 @@ export const DialogModal: React.FC<{
           {/* ========================================================= */}
           {(activeCategory === 'All' || activeCategory === 'Navigation') && (
             <div className="glass rounded-2xl border border-border shadow-card overflow-hidden">
-              <div className="p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
-                <div>
+              <div className="p-4 sm:p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
+                <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Primitive 05</span>
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-foreground/10 text-foreground font-semibold">Disclosure</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-foreground mt-1">Accordion Primitives</h3>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Accordion Primitives</h3>
                   <p className="text-xs text-muted-foreground">Animated disclosure cards with fluid height expansion.</p>
                 </div>
-                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl">
+                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('accordion', 'preview')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.accordion === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -926,7 +939,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('accordion', 'code')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.accordion === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -936,7 +949,7 @@ export const DialogModal: React.FC<{
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {viewModes.accordion === 'preview' ? (
                   <div className="space-y-2.5">
                     {accordionContent.map((item, idx) => {
@@ -953,7 +966,7 @@ export const DialogModal: React.FC<{
                           >
                             <span>{item.title}</span>
                             <ChevronDown
-                              className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                              className={`h-4 w-4 text-muted-foreground transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''}`}
                               strokeWidth={1.75}
                             />
                           </button>
@@ -990,20 +1003,20 @@ export const DialogModal: React.FC<{
           {/* ========================================================= */}
           {(activeCategory === 'All' || activeCategory === 'Navigation') && (
             <div className="glass rounded-2xl border border-border shadow-card overflow-hidden">
-              <div className="p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
-                <div>
+              <div className="p-4 sm:p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
+                <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Primitive 06</span>
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-foreground/10 text-foreground font-semibold">Navigation</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-foreground mt-1">Segmented Control</h3>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Segmented Control</h3>
                   <p className="text-xs text-muted-foreground">Sliding pill indicator with keyboard-accessible tabs.</p>
                 </div>
-                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl">
+                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('segmented', 'preview')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.segmented === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1013,7 +1026,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('segmented', 'code')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.segmented === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1023,17 +1036,17 @@ export const DialogModal: React.FC<{
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {viewModes.segmented === 'preview' ? (
                   <div className="space-y-4">
                     {/* Segmented Controls */}
-                    <div className="p-1 rounded-xl bg-secondary/80 border border-border flex gap-1">
+                    <div className="p-1 rounded-xl bg-secondary/80 border border-border flex flex-wrap sm:flex-nowrap gap-1">
                       {(['design', 'api', 'security'] as const).map(tab => (
                         <button
                           key={tab}
                           type="button"
                           onClick={() => setActiveSegment(tab)}
-                          className={`flex-1 py-2 rounded-lg text-xs font-mono capitalize transition-all ${
+                          className={`flex-1 min-w-[80px] py-2 px-2.5 rounded-lg text-[11px] sm:text-xs font-mono capitalize whitespace-nowrap transition-all ${
                             activeSegment === tab
                               ? 'bg-card text-foreground font-bold shadow-subtle border border-border'
                               : 'text-muted-foreground hover:text-foreground'
@@ -1090,20 +1103,20 @@ export const DialogModal: React.FC<{
           {/* ========================================================= */}
           {(activeCategory === 'All' || activeCategory === 'AI UI') && (
             <div className="glass rounded-2xl border border-border shadow-card overflow-hidden">
-              <div className="p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
-                <div>
+              <div className="p-4 sm:p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
+                <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Primitive 07</span>
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-foreground/10 text-foreground font-semibold">AI UI</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-foreground mt-1">AI Streaming Bubble</h3>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">AI Streaming Bubble</h3>
                   <p className="text-xs text-muted-foreground">Token-by-token simulated generator with abort controls.</p>
                 </div>
-                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl">
+                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('streaming', 'preview')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.streaming === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1113,7 +1126,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('streaming', 'code')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.streaming === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1123,7 +1136,7 @@ export const DialogModal: React.FC<{
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {viewModes.streaming === 'preview' ? (
                   <div className="space-y-4">
                     {/* Prompt Trigger Buttons */}
@@ -1132,7 +1145,7 @@ export const DialogModal: React.FC<{
                         type="button"
                         onClick={() => startStreaming('React 18 Concurrent Features introduce useTransition and Suspense boundaries for zero-jank interface updates.')}
                         disabled={isStreaming}
-                        className="text-xs font-mono px-3 py-1.5 rounded-lg border border-border bg-card hover:bg-secondary text-foreground transition active:scale-95 disabled:opacity-50"
+                        className="text-[11px] sm:text-xs font-mono px-3 py-1.5 rounded-lg border border-border bg-card hover:bg-secondary text-foreground transition active:scale-95 disabled:opacity-50 text-left whitespace-normal sm:whitespace-nowrap"
                       >
                         Prompt A: React 18 Concurrency
                       </button>
@@ -1140,7 +1153,7 @@ export const DialogModal: React.FC<{
                         type="button"
                         onClick={() => startStreaming('Next.js 14 App Router unlocks Server Components, reducing client bundle weight by keeping data loaders on edge nodes.')}
                         disabled={isStreaming}
-                        className="text-xs font-mono px-3 py-1.5 rounded-lg border border-border bg-card hover:bg-secondary text-foreground transition active:scale-95 disabled:opacity-50"
+                        className="text-[11px] sm:text-xs font-mono px-3 py-1.5 rounded-lg border border-border bg-card hover:bg-secondary text-foreground transition active:scale-95 disabled:opacity-50 text-left whitespace-normal sm:whitespace-nowrap"
                       >
                         Prompt B: Next.js Server Components
                       </button>
@@ -1183,20 +1196,20 @@ export const DialogModal: React.FC<{
           {/* ========================================================= */}
           {(activeCategory === 'All' || activeCategory === 'Feedback') && (
             <div className="glass rounded-2xl border border-border shadow-card overflow-hidden">
-              <div className="p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
-                <div>
+              <div className="p-4 sm:p-5 border-b border-border flex items-center justify-between flex-wrap gap-3 bg-secondary/30">
+                <div className="min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Primitive 08</span>
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-foreground/10 text-foreground font-semibold">Overlays</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-foreground mt-1">Modal Dialog</h3>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Modal Dialog</h3>
                   <p className="text-xs text-muted-foreground">Focus-trapped accessible dialog with backdrop dismiss.</p>
                 </div>
-                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl">
+                <div className="flex items-center gap-1.5 bg-card border border-border p-1 rounded-xl shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('modal', 'preview')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.modal === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1206,7 +1219,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('modal', 'code')}
-                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono transition ${
+                    className={`flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-mono whitespace-nowrap transition ${
                       viewModes.modal === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1216,18 +1229,18 @@ export const DialogModal: React.FC<{
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 {viewModes.modal === 'preview' ? (
-                  <div className="p-8 rounded-xl border border-dashed border-border flex flex-col items-center justify-center gap-3 bg-card/40 min-h-[140px]">
+                  <div className="p-6 sm:p-8 rounded-xl border border-dashed border-border flex flex-col items-center justify-center gap-3 bg-card/40 min-h-[140px]">
                     <button
                       type="button"
                       onClick={() => setModalOpen(true)}
-                      className="inline-flex items-center gap-2 h-10 px-5 rounded-xl bg-foreground text-background text-xs font-mono font-semibold hover:opacity-90 active:scale-95 transition shadow-subtle"
+                      className="inline-flex items-center gap-2 h-10 px-5 rounded-xl bg-foreground text-background text-xs font-mono font-semibold hover:opacity-90 active:scale-95 transition shadow-subtle whitespace-nowrap"
                     >
                       <Maximize2 className="h-3.5 w-3.5" strokeWidth={1.75} />
                       <span>Trigger Dialog Modal</span>
                     </button>
-                    <span className="text-[11px] font-mono text-muted-foreground">
+                    <span className="text-[11px] font-mono text-muted-foreground text-center">
                       ESC key listener &amp; backdrop blur enabled
                     </span>
                   </div>
@@ -1236,7 +1249,7 @@ export const DialogModal: React.FC<{
                     <button
                       type="button"
                       onClick={() => handleCopyCode('modal', codeSnippets.modal)}
-                      className="absolute top-3 right-3 text-xs font-mono flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-border bg-card hover:bg-muted text-muted-foreground hover:text-foreground transition"
+                      className="absolute top-3 right-3 text-xs font-mono flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-border bg-card hover:bg-muted text-muted-foreground hover:text-foreground transition whitespace-nowrap"
                     >
                       {copiedId === 'modal' ? <Check className="h-3 w-3 text-emerald-500" /> : <Copy className="h-3 w-3" />}
                       <span>{copiedId === 'modal' ? 'Copied' : 'Copy'}</span>
@@ -1280,11 +1293,11 @@ export const DialogModal: React.FC<{
                   Target: <code>cdn.softobiz-edge.prod</code> (Commit <code>#7f4a21</code>)
                 </div>
               </div>
-              <div className="pt-3 border-t border-border flex justify-end gap-2">
+              <div className="pt-3 border-t border-border flex justify-end gap-2 flex-wrap">
                 <button
                   type="button"
                   onClick={() => setModalOpen(false)}
-                  className="h-9 px-4 rounded-xl border border-border text-xs font-mono hover:bg-muted transition"
+                  className="h-9 px-4 rounded-xl border border-border text-xs font-mono hover:bg-muted transition whitespace-nowrap"
                 >
                   Cancel
                 </button>
@@ -1294,7 +1307,7 @@ export const DialogModal: React.FC<{
                     setModalOpen(false);
                     triggerToast('success');
                   }}
-                  className="h-9 px-5 rounded-xl bg-foreground text-background text-xs font-mono font-semibold hover:opacity-90 transition active:scale-95 shadow-subtle"
+                  className="h-9 px-5 rounded-xl bg-foreground text-background text-xs font-mono font-semibold hover:opacity-90 transition active:scale-95 shadow-subtle whitespace-nowrap"
                 >
                   Confirm Deploy
                 </button>

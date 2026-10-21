@@ -85,27 +85,27 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-28 relative">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="contact" className="py-20 sm:py-28 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto">
           <div className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold mb-3">
             05 / Dialogue
           </div>
-          <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground">
+          <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground break-words">
             Let's build something <span className="text-gradient">exceptional</span>
           </h2>
-          <p className="mt-4 text-muted-foreground text-base sm:text-lg leading-relaxed">
+          <p className="mt-4 text-muted-foreground text-sm sm:text-lg leading-relaxed break-words">
             Have an open engineering role, a high-growth product, or a technical inquiry? Send a message — I typically reply within 24 hours.
           </p>
         </div>
 
         {/* Content: Form + Quick Contact Cards */}
-        <div className="mt-14 grid lg:grid-cols-5 gap-8 items-start">
+        <div className="mt-10 sm:mt-14 grid lg:grid-cols-5 gap-6 sm:gap-8 items-start min-w-0 w-full">
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="lg:col-span-3 glass rounded-2xl p-6 sm:p-8 space-y-4 shadow-card border border-border"
+            className="lg:col-span-3 glass rounded-2xl p-4 sm:p-8 space-y-4 shadow-card border border-border min-w-0"
           >
             {status === 'success' && (
               <div className="p-4 rounded-xl bg-secondary border border-border text-foreground text-sm flex items-start gap-3">
@@ -184,7 +184,7 @@ export const Contact: React.FC = () => {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="inline-flex items-center justify-center gap-2 h-11 px-7 rounded-xl bg-foreground text-background font-medium hover:opacity-90 transition-all active:scale-95 disabled:opacity-60 cursor-pointer shadow-subtle text-sm"
+              className="inline-flex items-center justify-center gap-2 h-11 px-7 rounded-xl bg-foreground text-background font-medium hover:opacity-90 transition-all active:scale-95 disabled:opacity-60 cursor-pointer shadow-subtle text-sm whitespace-nowrap"
             >
               {status === 'loading' ? (
                 <>

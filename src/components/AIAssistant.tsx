@@ -177,19 +177,19 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onOpenResume }) => {
   return (
     <>
       {/* Floating Trigger Pill */}
-      <div className="fixed bottom-6 left-6 z-40">
+      <div className="fixed bottom-4 sm:bottom-6 left-4 sm:left-6 z-40 max-w-[calc(100vw-2rem)]">
         {!isOpen && (
           <button
             type="button"
             onClick={() => setIsOpen(true)}
             aria-label="Open AI Portfolio Assistant"
-            className="group flex items-center gap-2.5 px-3.5 py-2 rounded-xl glass border border-border shadow-card hover:shadow-spotlight hover:border-foreground/40 transition-all duration-200 bg-card text-foreground"
+            className="group flex items-center gap-2 sm:gap-2.5 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl glass border border-border shadow-card hover:shadow-spotlight hover:border-foreground/40 transition-all duration-200 bg-card text-foreground"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
-            <Sparkles className="h-3.5 w-3.5 text-foreground" />
+            <Sparkles className="h-3.5 w-3.5 text-foreground shrink-0" />
             <span className="text-xs font-mono font-medium tracking-tight">
               Ask Yatin's AI
             </span>
@@ -199,7 +199,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onOpenResume }) => {
 
       {/* Floating Chat Modal */}
       {isOpen && (
-        <div className="fixed bottom-6 left-6 z-50 w-[92vw] sm:w-[410px] h-[550px] max-h-[85vh] glass rounded-2xl border border-border shadow-elegant flex flex-col bg-card overflow-hidden transition-all duration-200 animate-in fade-in slide-in-from-bottom-4">
+        <div className="fixed bottom-4 sm:bottom-6 left-3 right-3 sm:right-auto sm:left-6 z-50 sm:w-[410px] h-[520px] sm:h-[550px] max-h-[85vh] glass rounded-2xl border border-border shadow-elegant flex flex-col bg-card overflow-hidden transition-all duration-200 animate-in fade-in slide-in-from-bottom-4">
           {/* Header */}
           <div className="px-4 py-3 border-b border-border flex items-center justify-between bg-secondary/50">
             <div className="flex items-center gap-2.5">

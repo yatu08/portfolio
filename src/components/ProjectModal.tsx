@@ -119,10 +119,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <h3 className="text-xs font-mono uppercase tracking-wider text-primary font-semibold mb-2.5">
               Architectural Highlights
             </h3>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid sm:grid-cols-2 gap-2">
               {project.highlights.map((h) => (
                 <div key={h} className="glass rounded-xl p-2.5 border border-border text-xs text-muted-foreground flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
                   <span>{h}</span>
                 </div>
               ))}
@@ -144,7 +144,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         <div className="p-3.5 sm:px-7 border-t border-border flex justify-end shrink-0 bg-secondary/30">
           <button
             onClick={onClose}
-            className="h-9 px-5 rounded-lg bg-foreground text-background text-xs sm:text-sm font-medium hover:opacity-90 transition active:scale-95 shadow-subtle"
+            className="h-9 px-5 rounded-lg bg-foreground text-background text-xs sm:text-sm font-medium hover:opacity-90 transition active:scale-95 shadow-subtle whitespace-nowrap"
           >
             Close Details
           </button>

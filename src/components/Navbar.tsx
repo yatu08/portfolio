@@ -52,8 +52,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-3 sm:pt-4 transition-all duration-200">
-      <nav className="glass-nav max-w-6xl mx-auto rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between border border-border shadow-subtle">
+    <header className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-6 pt-2.5 sm:pt-4 transition-all duration-200">
+      <nav className="glass-nav max-w-6xl mx-auto rounded-2xl px-3.5 sm:px-6 py-2 sm:py-3 flex items-center justify-between border border-border shadow-subtle min-w-0">
         {/* Logo / Wordmark */}
         <a
           href="#"
@@ -83,12 +83,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               type="button"
               onClick={() => onNavigate?.('home')}
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-lg text-xs font-mono font-medium bg-secondary border border-border hover:border-foreground/40 text-foreground transition active:scale-95 shadow-subtle"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-lg text-xs font-mono font-medium bg-secondary border border-border hover:border-foreground/40 text-foreground transition active:scale-95 shadow-subtle whitespace-nowrap"
             >
               <ArrowLeft className="h-3 w-3" strokeWidth={1.75} />
               <span>Back to Portfolio</span>
             </button>
-            <span className="hidden sm:inline text-xs font-mono text-muted-foreground">/ Component Sandbox</span>
+            <span className="hidden sm:inline text-xs font-mono text-muted-foreground whitespace-nowrap">/ Component Sandbox</span>
           </div>
         ) : (
           <ul className="hidden md:flex items-center gap-1 p-1 rounded-xl bg-secondary/60 border border-border/80 text-sm">

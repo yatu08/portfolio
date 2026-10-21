@@ -72,7 +72,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative selection:bg-primary selection:text-primary-foreground font-sans">
+    <div className="min-h-screen bg-background text-foreground relative selection:bg-primary selection:text-primary-foreground font-sans overflow-x-hidden w-full max-w-full">
       {/* Real-time reading & scroll progress indicator */}
       <ScrollProgress />
 
@@ -91,7 +91,7 @@ export const App: React.FC = () => {
         />
       ) : (
         /* Main Content Sections */
-        <main>
+        <main className="overflow-x-hidden w-full max-w-full min-w-0">
           {/* Hero Section */}
           <Hero onOpenResume={() => setIsResumeOpen(true)} />
 
