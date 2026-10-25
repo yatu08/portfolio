@@ -36,7 +36,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl apple-glass-card rounded-3xl overflow-hidden shadow-elegant border border-border/80 my-auto flex flex-col max-h-[calc(100vh-3.5rem)] sm:max-h-[calc(100vh-5rem)]"
+        className="relative w-full max-w-3xl apple-glass-card rounded-3xl overflow-hidden shadow-elegant border border-border/80 my-auto flex flex-col max-h-[calc(100vh-3.5rem)] sm:max-h-[calc(100vh-5rem)]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Banner with architectural canvas */}
@@ -44,12 +44,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
           
           <div className="flex items-center justify-between z-10">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-300 bg-white/10 backdrop-blur-md rounded-full px-3 py-1 border border-white/15">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-300 bg-white/10 backdrop-blur-md rounded-lg px-2.5 py-1 border border-white/15">
               {project.badge}
             </span>
             <button
               onClick={onClose}
-              className="h-8 w-8 rounded-full bg-white/10 text-white backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition border border-white/15 active:scale-95"
+              className="h-8 w-8 rounded-lg bg-white/10 text-white backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition border border-white/15 active:scale-95"
               aria-label="Close modal"
             >
               <X className="h-4 w-4" />
@@ -106,7 +106,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="text-xs px-3 py-1 rounded-full glass-pill border border-border/70 text-foreground font-medium"
+                  className="text-xs px-2.5 py-1 rounded-lg glass-pill border border-border/70 text-foreground font-medium"
                 >
                   {tech}
                 </span>
@@ -121,7 +121,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             </h3>
             <div className="grid sm:grid-cols-2 gap-2.5">
               {project.highlights.map((h) => (
-                <div key={h} className="apple-glass rounded-2xl p-3 border border-border/70 text-xs text-muted-foreground flex items-center gap-2.5">
+                <div key={h} className="apple-glass rounded-xl p-3 border border-border/70 text-xs text-muted-foreground flex items-center gap-2.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
                   <span>{h}</span>
                 </div>
@@ -130,7 +130,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
 
           {/* Confidentiality Notice */}
-          <div className="rounded-2xl p-4 bg-muted/40 border border-border/70 flex items-start gap-3">
+          <div className="rounded-xl p-4 bg-muted/40 border border-border/70 flex items-start gap-3">
             <ShieldCheck className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
             <div className="text-xs text-muted-foreground leading-relaxed">
               <span className="font-semibold text-foreground">Confidentiality Protected:</span>
@@ -144,7 +144,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         <div className="p-4 sm:px-8 border-t border-border/70 flex justify-end shrink-0 bg-card/60 backdrop-blur-md">
           <button
             onClick={onClose}
-            className="h-9 px-6 rounded-full bg-foreground text-background text-xs sm:text-sm font-medium hover:opacity-90 transition active:scale-95 shadow-subtle whitespace-nowrap"
+            className="h-9 px-6 rounded-xl bg-foreground text-background text-xs sm:text-sm font-medium hover:opacity-90 transition active:scale-95 shadow-subtle whitespace-nowrap"
           >
             Close Details
           </button>

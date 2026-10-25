@@ -33,7 +33,7 @@ export const Projects: React.FC = () => {
 
   return (
     <section id="projects" className="py-24 sm:py-32 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Section Header */}
         <div className="flex items-start sm:items-end justify-between flex-wrap gap-4 sm:gap-6">
           <div>
@@ -47,7 +47,7 @@ export const Projects: React.FC = () => {
               Production architectures engineered for performance, scale, and uncompromising UX quality.
             </p>
           </div>
-          <div className="flex items-center gap-2 glass-pill px-4 py-1.5 rounded-full border border-border text-xs text-muted-foreground max-w-full">
+          <div className="flex items-center gap-2 glass-pill px-3.5 py-1.5 rounded-xl border border-border text-xs text-muted-foreground max-w-full">
             <ShieldCheck className="h-3.5 w-3.5 text-foreground shrink-0" strokeWidth={1.75} />
             <span className="truncate">Enterprise systems &amp; client IP protected under NDA.</span>
           </div>
@@ -63,7 +63,7 @@ export const Projects: React.FC = () => {
                 key={filter}
                 type="button"
                 onClick={() => setActiveFilter(filter)}
-                className={`text-xs px-4 py-1.5 rounded-full font-mono transition-all flex items-center gap-2 whitespace-nowrap ${
+                className={`text-xs px-3.5 py-1.5 rounded-xl font-mono transition-all flex items-center gap-2 whitespace-nowrap ${
                   isActive
                     ? 'bg-foreground text-background font-semibold shadow-subtle'
                     : 'glass border border-border text-muted-foreground hover:text-foreground hover:border-foreground/30'
@@ -71,7 +71,7 @@ export const Projects: React.FC = () => {
               >
                 <span>{filter}</span>
                 <span
-                  className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                  className={`text-[10px] px-1.5 py-0.2 rounded-md font-mono ${
                     isActive ? 'bg-background/20 text-background' : 'bg-muted text-muted-foreground'
                   }`}
                 >
@@ -103,11 +103,11 @@ export const Projects: React.FC = () => {
 
                   {/* Top Bar inside banner */}
                   <div className="flex items-center justify-between z-10">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-300 bg-white/10 backdrop-blur-md rounded-full px-3 py-1 border border-white/15">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-300 bg-white/10 backdrop-blur-md rounded-lg px-2.5 py-1 border border-white/15">
                       {project.category}
                     </span>
                     <div
-                      className="h-8 w-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-white group-hover:text-black group-hover:rotate-45 transition-all duration-200 border border-white/15"
+                      className="h-8 w-8 rounded-lg bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-white group-hover:text-black group-hover:rotate-45 transition-all duration-200 border border-white/15"
                       title="Inspect Details"
                     >
                       <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.75} />
@@ -132,7 +132,7 @@ export const Projects: React.FC = () => {
                   </p>
 
                   {/* Role Highlight */}
-                  <div className="mt-5 text-xs font-mono text-muted-foreground flex items-center gap-2 bg-secondary/60 p-3 rounded-2xl border border-border/80">
+                  <div className="mt-5 text-xs font-mono text-muted-foreground flex items-center gap-2 bg-secondary/60 p-3 rounded-xl border border-border/80">
                     <span className="text-foreground font-semibold">Role:</span>
                     <span className="text-foreground/90">{project.role}</span>
                   </div>

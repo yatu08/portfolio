@@ -17,7 +17,7 @@ export const About: React.FC = () => {
 
   return (
     <section id="about" className="py-24 sm:py-32 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Section Header */}
         <div>
           <div className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold">

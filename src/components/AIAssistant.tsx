@@ -183,7 +183,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onOpenResume }) => {
             type="button"
             onClick={() => setIsOpen(true)}
             aria-label="Open AI Portfolio Assistant"
-            className="group flex items-center gap-2 sm:gap-2.5 px-4 py-2 rounded-full glass-pill border border-border/80 shadow-elegant hover:shadow-spotlight hover:border-foreground/30 transition-all duration-300 bg-background/80 text-foreground active:scale-[0.98]"
+            className="group flex items-center gap-2 sm:gap-2.5 px-3.5 py-2 rounded-xl glass-pill border border-border/80 shadow-elegant hover:shadow-spotlight hover:border-foreground/30 transition-all duration-300 bg-background/80 text-foreground active:scale-[0.98]"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
@@ -203,7 +203,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onOpenResume }) => {
           {/* Header */}
           <div className="px-4 py-3 border-b border-border/60 flex items-center justify-between bg-card/60 backdrop-blur-md">
             <div className="flex items-center gap-2.5">
-              <div className="h-7 w-7 rounded-full bg-foreground text-background flex items-center justify-center">
+              <div className="h-7 w-7 rounded-lg bg-foreground text-background flex items-center justify-center">
                 <Sparkles className="h-3.5 w-3.5" />
               </div>
               <div>
@@ -223,7 +223,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onOpenResume }) => {
                   type="button"
                   onClick={onOpenResume}
                   title="View Resume"
-                  className="h-7 px-2.5 rounded-full glass-pill border border-border/70 flex items-center gap-1 text-[11px] font-mono text-muted-foreground hover:text-foreground transition active:scale-95"
+                  className="h-7 px-2.5 rounded-lg glass-pill border border-border/70 flex items-center gap-1 text-[11px] font-mono text-muted-foreground hover:text-foreground transition active:scale-95"
                 >
                   <FileText className="h-3 w-3" />
                   <span>CV</span>
@@ -233,7 +233,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onOpenResume }) => {
                 type="button"
                 onClick={handleClear}
                 title="Reset conversation"
-                className="h-7 w-7 rounded-full glass-pill border border-border/70 flex items-center justify-center text-muted-foreground hover:text-foreground transition active:scale-95"
+                className="h-7 w-7 rounded-lg glass-pill border border-border/70 flex items-center justify-center text-muted-foreground hover:text-foreground transition active:scale-95"
               >
                 <RotateCcw className="h-3 w-3" />
               </button>
@@ -241,7 +241,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onOpenResume }) => {
                 type="button"
                 onClick={() => setIsOpen(false)}
                 title="Minimize chat"
-                className="h-7 w-7 rounded-full glass-pill border border-border/70 flex items-center justify-center text-muted-foreground hover:text-foreground transition active:scale-95"
+                className="h-7 w-7 rounded-lg glass-pill border border-border/70 flex items-center justify-center text-muted-foreground hover:text-foreground transition active:scale-95"
               >
                 <ChevronDown className="h-4 w-4" />
               </button>
@@ -296,7 +296,7 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onOpenResume }) => {
                 type="button"
                 onClick={() => handleSendMessage(p)}
                 disabled={isTyping}
-                className="text-[11px] font-mono whitespace-nowrap px-3 py-1 rounded-full glass-pill border border-border/70 hover:border-foreground/30 text-muted-foreground hover:text-foreground transition active:scale-95 disabled:opacity-50 flex items-center gap-1.5"
+                className="text-[11px] font-mono whitespace-nowrap px-3 py-1 rounded-lg glass-pill border border-border/70 hover:border-foreground/30 text-muted-foreground hover:text-foreground transition active:scale-95 disabled:opacity-50 flex items-center gap-1.5"
               >
                 <Sparkles className="h-2.5 w-2.5 text-foreground/70 shrink-0" strokeWidth={1.75} />
                 <span>{p}</span>
@@ -318,12 +318,12 @@ export const AIAssistant: React.FC<AIAssistantProps> = ({ onOpenResume }) => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               disabled={isTyping}
-              className="flex-1 h-9 px-4 rounded-full border border-border/80 bg-background/70 text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground/50 transition"
+              className="flex-1 h-9 px-3.5 rounded-xl border border-border/80 bg-background/70 text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground/50 transition"
             />
             <button
               type="submit"
               disabled={!input.trim() || isTyping}
-              className="h-8 w-8 rounded-full bg-foreground text-background flex items-center justify-center hover:opacity-90 active:scale-95 disabled:opacity-30 transition shrink-0 shadow-subtle"
+              className="h-8 w-8 rounded-lg bg-foreground text-background flex items-center justify-center hover:opacity-90 active:scale-95 disabled:opacity-30 transition shrink-0 shadow-subtle"
               title="Send message"
             >
               <ArrowUp className="h-4 w-4" strokeWidth={2} />

@@ -86,7 +86,7 @@ export const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-24 sm:py-32 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto">
           <div className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold mb-3">
@@ -108,7 +108,7 @@ export const Contact: React.FC = () => {
             className="lg:col-span-3 apple-glass-card rounded-3xl p-6 sm:p-8 space-y-5 border border-border shadow-card min-w-0"
           >
             {status === 'success' && (
-              <div className="p-4 rounded-2xl bg-secondary border border-border text-foreground text-sm flex items-start gap-3">
+              <div className="p-4 rounded-xl bg-secondary border border-border text-foreground text-sm flex items-start gap-3">
                 <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold">Message dispatched.</p>
@@ -120,7 +120,7 @@ export const Contact: React.FC = () => {
             )}
 
             {status === 'error' && (
-              <div className="p-4 rounded-2xl bg-destructive/10 border border-destructive/20 text-destructive text-sm flex items-center gap-3">
+              <div className="p-4 rounded-xl bg-destructive/10 border border-destructive/20 text-destructive text-sm flex items-center gap-3">
                 <AlertCircle className="h-4 w-4 shrink-0" />
                 <span>{errorMessage}</span>
               </div>
@@ -184,7 +184,7 @@ export const Contact: React.FC = () => {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="inline-flex items-center justify-center gap-2 h-11 px-7 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-all active:scale-[0.98] disabled:opacity-60 cursor-pointer shadow-elegant text-sm whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 h-11 px-7 rounded-xl bg-foreground text-background font-medium hover:opacity-90 transition-all active:scale-[0.98] disabled:opacity-60 cursor-pointer shadow-elegant text-sm whitespace-nowrap"
             >
               {status === 'loading' ? (
                 <>
@@ -224,7 +224,7 @@ export const Contact: React.FC = () => {
               <button
                 type="button"
                 onClick={handleCopyEmail}
-                className="h-8 w-8 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-card transition shrink-0 ml-2"
+                className="h-8 w-8 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-card transition shrink-0 ml-2"
                 title="Copy email to clipboard"
               >
                 {copiedEmail ? (
@@ -242,7 +242,7 @@ export const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="apple-glass-card rounded-2xl p-4 sm:p-5 flex items-center gap-3.5 group border border-border"
             >
-              <div className="h-11 w-11 rounded-2xl bg-card border border-border shadow-subtle flex items-center justify-center shrink-0 group-hover:border-foreground/40 transition-colors">
+              <div className="h-11 w-11 rounded-xl bg-card border border-border shadow-subtle flex items-center justify-center shrink-0 group-hover:border-foreground/40 transition-colors">
                 <Linkedin className="h-4 w-4 text-foreground" strokeWidth={1.75} />
               </div>
               <div className="min-w-0">
@@ -262,7 +262,7 @@ export const Contact: React.FC = () => {
               rel="noopener noreferrer"
               className="apple-glass-card rounded-2xl p-4 sm:p-5 flex items-center gap-3.5 group border border-border"
             >
-              <div className="h-11 w-11 rounded-2xl bg-card border border-border shadow-subtle flex items-center justify-center shrink-0 group-hover:border-foreground/40 transition-colors">
+              <div className="h-11 w-11 rounded-xl bg-card border border-border shadow-subtle flex items-center justify-center shrink-0 group-hover:border-foreground/40 transition-colors">
                 <Github className="h-4 w-4 text-foreground" strokeWidth={1.75} />
               </div>
               <div className="min-w-0">

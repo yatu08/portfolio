@@ -14,12 +14,12 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="border-t border-border/60 py-12 sm:py-16 mt-16 sm:mt-24 bg-background/50 overflow-hidden w-full">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full min-w-0">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           {/* Copyright & Brand */}
           <div className="flex flex-col items-center sm:items-start gap-1">
             <div className="flex items-center gap-2.5">
-              <span className="h-6 w-6 rounded-full bg-foreground text-background flex items-center justify-center font-mono text-xs font-bold shadow-subtle">
+              <span className="h-6 w-6 rounded-lg bg-foreground text-background flex items-center justify-center font-mono text-xs font-bold shadow-subtle">
                 Y
               </span>
               <span className="text-sm font-semibold text-foreground tracking-tight">{profileData.name}</span>
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="h-9 w-9 rounded-full glass border border-border flex items-center justify-center hover:text-foreground transition-all text-foreground/80 shadow-subtle active:scale-95"
+              className="h-9 w-9 rounded-xl glass border border-border flex items-center justify-center hover:text-foreground transition-all text-foreground/80 shadow-subtle active:scale-95"
               title="GitHub"
             >
               <Github className="h-4 w-4" strokeWidth={1.75} />
@@ -46,7 +46,7 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="h-9 w-9 rounded-full glass border border-border flex items-center justify-center hover:text-foreground transition-all text-foreground/80 shadow-subtle active:scale-95"
+              className="h-9 w-9 rounded-xl glass border border-border flex items-center justify-center hover:text-foreground transition-all text-foreground/80 shadow-subtle active:scale-95"
               title="LinkedIn"
             >
               <Linkedin className="h-4 w-4" strokeWidth={1.75} />
@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
             <a
               href={`mailto:${profileData.email}`}
               aria-label="Email"
-              className="h-9 w-9 rounded-full glass border border-border flex items-center justify-center hover:text-foreground transition-all text-foreground/80 shadow-subtle active:scale-95"
+              className="h-9 w-9 rounded-xl glass border border-border flex items-center justify-center hover:text-foreground transition-all text-foreground/80 shadow-subtle active:scale-95"
               title="Email"
             >
               <Mail className="h-4 w-4" strokeWidth={1.75} />
@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
           <button
             type="button"
             onClick={scrollToTop}
-            className="flex items-center gap-2 text-xs font-mono text-muted-foreground hover:text-foreground px-4 py-1.5 rounded-full glass border border-border transition active:scale-95 shadow-subtle"
+            className="flex items-center gap-2 text-xs font-mono text-muted-foreground hover:text-foreground px-4 py-1.5 rounded-xl glass border border-border transition active:scale-95 shadow-subtle"
             aria-label="Back to top"
           >
             <span>Top</span>

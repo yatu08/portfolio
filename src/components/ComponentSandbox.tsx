@@ -414,7 +414,7 @@ export const DialogModal: React.FC<{
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground font-sans pb-24">
       {/* Main Container - clears fixed Navbar */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28">
+      <main className="max-w-7xl 2xl:max-w-[1400px] mx-auto px-4 sm:px-6 pt-24 sm:pt-28">
         {/* Hero Banner inside Sandbox */}
         <div className="border border-border/80 rounded-3xl p-6 sm:p-10 apple-glass-card relative overflow-hidden shadow-elegant">
           <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
@@ -430,7 +430,7 @@ export const DialogModal: React.FC<{
               </button>
             )}
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border/70 bg-card/60 backdrop-blur-md text-xs font-mono text-foreground mb-4 shadow-subtle">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg border border-border/70 bg-card/60 backdrop-blur-md text-xs font-mono text-foreground mb-4 shadow-subtle">
                 <Sparkles className="h-3.5 w-3.5 text-foreground" strokeWidth={1.75} />
                 <span>Interactive Design System &amp; Component Lab</span>
               </div>
@@ -449,7 +449,7 @@ export const DialogModal: React.FC<{
                   key={cat}
                   type="button"
                   onClick={() => setActiveCategory(cat)}
-                  className={`text-xs font-mono px-4 py-2 rounded-full whitespace-nowrap transition-all active:scale-95 ${
+                  className={`text-xs font-mono px-3.5 py-1.5 rounded-xl whitespace-nowrap transition-all active:scale-95 ${
                     activeCategory === cat
                       ? 'bg-foreground text-background font-semibold shadow-subtle'
                       : 'glass-pill border border-border/70 text-muted-foreground hover:text-foreground hover:border-foreground/30'
@@ -479,11 +479,11 @@ export const DialogModal: React.FC<{
                   <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Button System</h3>
                   <p className="text-xs text-muted-foreground">Tactile states, spinner reactivity, and variant tokens.</p>
                 </div>
-                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-full shrink-0">
+                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-lg shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('button', 'preview')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.button === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -493,7 +493,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('button', 'code')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.button === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -597,11 +597,11 @@ export const DialogModal: React.FC<{
                   <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Toast System</h3>
                   <p className="text-xs text-muted-foreground">Auto-dismissing, animated status feedback notifications.</p>
                 </div>
-                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-full shrink-0">
+                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-lg shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('toast', 'preview')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.toast === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -611,7 +611,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('toast', 'code')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.toast === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -714,11 +714,11 @@ export const DialogModal: React.FC<{
                   <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">SaaS Metric Card</h3>
                   <p className="text-xs text-muted-foreground">High-density data card with dynamic period switching.</p>
                 </div>
-                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-full shrink-0">
+                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-lg shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('metric', 'preview')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.metric === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -728,7 +728,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('metric', 'code')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.metric === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -815,11 +815,11 @@ export const DialogModal: React.FC<{
                   <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Tag Input Selector</h3>
                   <p className="text-xs text-muted-foreground">Filterable multiselect badge input with instant filtering.</p>
                 </div>
-                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-full shrink-0">
+                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-lg shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('autocomplete', 'preview')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.autocomplete === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -829,7 +829,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('autocomplete', 'code')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.autocomplete === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -925,11 +925,11 @@ export const DialogModal: React.FC<{
                   <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Accordion Primitives</h3>
                   <p className="text-xs text-muted-foreground">Animated disclosure cards with fluid height expansion.</p>
                 </div>
-                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-full shrink-0">
+                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-lg shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('accordion', 'preview')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.accordion === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -939,7 +939,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('accordion', 'code')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.accordion === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1012,11 +1012,11 @@ export const DialogModal: React.FC<{
                   <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Segmented Control</h3>
                   <p className="text-xs text-muted-foreground">Sliding pill indicator with keyboard-accessible tabs.</p>
                 </div>
-                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-full shrink-0">
+                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-lg shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('segmented', 'preview')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.segmented === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1026,7 +1026,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('segmented', 'code')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.segmented === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1112,11 +1112,11 @@ export const DialogModal: React.FC<{
                   <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">AI Streaming Bubble</h3>
                   <p className="text-xs text-muted-foreground">Token-by-token simulated generator with abort controls.</p>
                 </div>
-                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-full shrink-0">
+                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-lg shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('streaming', 'preview')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.streaming === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1126,7 +1126,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('streaming', 'code')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.streaming === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1205,11 +1205,11 @@ export const DialogModal: React.FC<{
                   <h3 className="font-display font-bold text-base sm:text-lg text-foreground mt-1">Modal Dialog</h3>
                   <p className="text-xs text-muted-foreground">Focus-trapped accessible dialog with backdrop dismiss.</p>
                 </div>
-                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-full shrink-0">
+                <div className="flex items-center gap-1 bg-card/60 backdrop-blur-md border border-border/70 p-1 rounded-lg shrink-0">
                   <button
                     type="button"
                     onClick={() => toggleViewMode('modal', 'preview')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.modal === 'preview' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1219,7 +1219,7 @@ export const DialogModal: React.FC<{
                   <button
                     type="button"
                     onClick={() => toggleViewMode('modal', 'code')}
-                    className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-mono whitespace-nowrap transition ${
+                    className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs font-mono whitespace-nowrap transition ${
                       viewModes.modal === 'code' ? 'bg-foreground text-background font-medium' : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
@@ -1282,7 +1282,7 @@ export const DialogModal: React.FC<{
                 <button
                   type="button"
                   onClick={() => setModalOpen(false)}
-                  className="h-8 w-8 rounded-full glass-pill border border-border/70 flex items-center justify-center text-muted-foreground hover:text-foreground transition active:scale-95"
+                  className="h-8 w-8 rounded-lg glass-pill border border-border/70 flex items-center justify-center text-muted-foreground hover:text-foreground transition active:scale-95"
                 >
                   <X className="h-4 w-4" strokeWidth={1.75} />
                 </button>
@@ -1297,7 +1297,7 @@ export const DialogModal: React.FC<{
                 <button
                   type="button"
                   onClick={() => setModalOpen(false)}
-                  className="h-9 px-4 rounded-full glass-pill border border-border/70 text-xs font-mono hover:text-foreground transition whitespace-nowrap active:scale-95"
+                  className="h-9 px-4 rounded-xl glass-pill border border-border/70 text-xs font-mono hover:text-foreground transition whitespace-nowrap active:scale-95"
                 >
                   Cancel
                 </button>
@@ -1307,7 +1307,7 @@ export const DialogModal: React.FC<{
                     setModalOpen(false);
                     triggerToast('success');
                   }}
-                  className="h-9 px-5 rounded-full bg-foreground text-background text-xs font-mono font-semibold hover:opacity-90 transition active:scale-95 shadow-subtle whitespace-nowrap"
+                  className="h-9 px-5 rounded-xl bg-foreground text-background text-xs font-mono font-semibold hover:opacity-90 transition active:scale-95 shadow-subtle whitespace-nowrap"
                 >
                   Confirm Deploy
                 </button>

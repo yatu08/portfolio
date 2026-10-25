@@ -100,9 +100,9 @@ const engineer: FrontendDeveloper = {
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-background/60 to-background pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[320px] sm:w-[760px] h-[280px] sm:h-[400px] bg-gradient-to-b from-foreground/[0.035] to-transparent rounded-full blur-3xl pointer-events-none -z-10 max-w-full" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Availability Badge */}
-        <div className="inline-flex items-center gap-2.5 glass-pill rounded-full px-4 py-1.5 text-xs sm:text-[13px] font-mono mb-8 border border-border shadow-subtle hover:border-foreground/30 transition-colors">
+        <div className="inline-flex items-center gap-2.5 glass-pill rounded-xl px-3.5 py-1.5 text-xs sm:text-[13px] font-mono  border border-border shadow-subtle hover:border-foreground/30 transition-colors">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
@@ -138,7 +138,7 @@ const engineer: FrontendDeveloper = {
               {quickSkills.map((skill) => (
                 <span
                   key={skill}
-                  className="text-xs sm:text-[13px] font-mono px-3 py-1 rounded-full border border-border glass-pill text-foreground font-medium shadow-subtle"
+                  className="text-xs sm:text-[13px] font-mono px-3 py-1 rounded-lg border border-border glass-pill text-foreground font-medium shadow-subtle"
                 >
                   {skill}
                 </span>
@@ -150,7 +150,7 @@ const engineer: FrontendDeveloper = {
               {/* Primary CTA: Classy Solid Button */}
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-2 h-11 px-6 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-all duration-150 active:scale-[0.98] shadow-elegant text-sm whitespace-nowrap"
+                className="group inline-flex items-center gap-2 h-11 px-6 rounded-xl bg-foreground text-background font-medium hover:opacity-90 transition-all duration-150 active:scale-[0.98] shadow-elegant text-sm whitespace-nowrap"
               >
                 <span>Hire me</span>
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.75} />
@@ -159,7 +159,7 @@ const engineer: FrontendDeveloper = {
               {/* Secondary CTA: Clean Outline */}
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 h-11 px-6 rounded-full glass border border-border text-foreground transition-all duration-150 font-medium active:scale-[0.98] text-sm whitespace-nowrap hover:border-foreground/30"
+                className="inline-flex items-center gap-2 h-11 px-6 rounded-xl glass border border-border text-foreground transition-all duration-150 font-medium active:scale-[0.98] text-sm whitespace-nowrap hover:border-foreground/30"
               >
                 <span>View Projects</span>
               </a>
@@ -168,7 +168,7 @@ const engineer: FrontendDeveloper = {
               <button
                 type="button"
                 onClick={onOpenResume}
-                className="inline-flex items-center gap-2 h-11 px-6 rounded-full glass border border-border text-foreground transition-all duration-150 font-medium active:scale-[0.98] text-sm whitespace-nowrap hover:border-foreground/30"
+                className="inline-flex items-center gap-2 h-11 px-6 rounded-xl glass border border-border text-foreground transition-all duration-150 font-medium active:scale-[0.98] text-sm whitespace-nowrap hover:border-foreground/30"
               >
                 <Download className="h-3.5 w-3.5 text-muted-foreground" strokeWidth={1.75} />
                 <span>Resume</span>
@@ -182,7 +182,7 @@ const engineer: FrontendDeveloper = {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"
-                className="h-10 w-10 rounded-full glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground transition-all shadow-subtle text-foreground/80 shrink-0 active:scale-95"
+                className="h-10 w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground transition-all shadow-subtle text-foreground/80 shrink-0 active:scale-95"
                 title="GitHub"
               >
                 <Github className="h-4 w-4" strokeWidth={1.75} />
@@ -192,7 +192,7 @@ const engineer: FrontendDeveloper = {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
-                className="h-10 w-10 rounded-full glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground transition-all shadow-subtle text-foreground/80 shrink-0 active:scale-95"
+                className="h-10 w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground transition-all shadow-subtle text-foreground/80 shrink-0 active:scale-95"
                 title="LinkedIn"
               >
                 <Linkedin className="h-4 w-4" strokeWidth={1.75} />
@@ -200,7 +200,7 @@ const engineer: FrontendDeveloper = {
               <a
                 href={`mailto:${profileData.email}`}
                 aria-label="Send Email"
-                className="h-10 w-10 rounded-full glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground transition-all shadow-subtle text-foreground/80 shrink-0 active:scale-95"
+                className="h-10 w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground transition-all shadow-subtle text-foreground/80 shrink-0 active:scale-95"
                 title="Send Email"
               >
                 <Mail className="h-4 w-4" strokeWidth={1.75} />
@@ -438,7 +438,7 @@ const engineer: FrontendDeveloper = {
             </span>
           </div>
 
-          <div className="relative overflow-hidden rounded-2xl border border-border/80 apple-glass py-3.5 w-full min-w-0">
+          <div className="relative overflow-hidden rounded-xl border border-border/80 apple-glass py-3.5 w-full min-w-0">
             <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
             <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
             
@@ -446,7 +446,7 @@ const engineer: FrontendDeveloper = {
               {techStackPills.concat(techStackPills).map((item, idx) => (
                 <div
                   key={idx}
-                  className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 rounded-full glass-pill text-[11px] sm:text-xs font-mono text-foreground font-medium shadow-subtle hover:border-foreground/40 transition shrink-0"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 rounded-lg glass-pill text-[11px] sm:text-xs font-mono text-foreground font-medium shadow-subtle hover:border-foreground/40 transition shrink-0"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0" />
                   <span>{item}</span>

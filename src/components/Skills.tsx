@@ -55,13 +55,13 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
       {/* Header */}
       <div className="flex items-center justify-between mb-5 pb-4 border-b border-border/70 flex-wrap gap-4">
         <div className="flex items-center gap-3.5">
-          <div className="h-10 w-10 rounded-2xl bg-foreground text-background flex items-center justify-center shadow-subtle shrink-0">
+          <div className="h-10 w-10 rounded-xl bg-foreground text-background flex items-center justify-center shadow-subtle shrink-0">
             <Sparkles className="h-4 w-4" strokeWidth={1.75} />
           </div>
           <div>
             <h4 className="font-display font-semibold text-base sm:text-lg text-foreground flex items-center gap-2.5 flex-wrap">
               <span>Design System &amp; Component Lab</span>
-              <span className="text-[11px] font-mono text-muted-foreground border border-border px-2.5 py-0.5 rounded-full bg-secondary/50">
+              <span className="text-[11px] font-mono text-muted-foreground border border-border px-2.5 py-0.5 rounded-lg bg-secondary/50">
                 8 Live Primitives
               </span>
             </h4>
@@ -75,7 +75,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
           <button
             type="button"
             onClick={onOpenSandbox}
-            className="hidden md:inline-flex items-center gap-2 h-9 px-4 rounded-full border border-border glass hover:border-foreground/40 text-foreground text-xs font-mono font-medium transition shadow-subtle"
+            className="hidden md:inline-flex items-center gap-2 h-9 px-4 rounded-xl border border-border glass hover:border-foreground/40 text-foreground text-xs font-mono font-medium transition shadow-subtle"
           >
             <Code2 className="h-3.5 w-3.5" strokeWidth={1.75} />
             <span>Launch Lab</span>
@@ -99,7 +99,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
         {componentPrimitives.map((item, idx) => (
           <div
             key={idx}
-            className="p-3 rounded-xl border border-border glass-pill text-xs font-mono text-foreground/85 flex items-center gap-2 transition-colors shadow-subtle min-w-0"
+            className="p-3 rounded-lg border border-border glass-pill text-xs font-mono text-foreground/85 flex items-center gap-2 transition-colors shadow-subtle min-w-0"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0" />
             <span className="truncate" title={item.full}>
@@ -113,7 +113,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
       <button
         type="button"
         onClick={onOpenSandbox}
-        className="w-full mt-4 flex items-center justify-between p-4 rounded-2xl bg-foreground text-background font-mono text-xs sm:text-sm font-semibold hover:opacity-95 transition-all active:scale-[0.99] shadow-elegant group"
+        className="w-full mt-4 flex items-center justify-between p-4 rounded-xl bg-foreground text-background font-mono text-xs sm:text-sm font-semibold hover:opacity-95 transition-all active:scale-[0.99] shadow-elegant group"
       >
         <div className="flex items-center gap-2.5">
           <Code2 className="h-4 w-4" strokeWidth={1.75} />
@@ -129,7 +129,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
       {/* Delicate Particle Canvas */}
       <ParticleCanvas />
       
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
@@ -145,14 +145,14 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
           </div>
 
           {/* Category Filter Tabs */}
-          <div className="flex flex-wrap items-center gap-1 p-1 rounded-full glass border border-border min-w-0">
+          <div className="flex flex-wrap items-center gap-1 p-1 rounded-xl glass border border-border min-w-0">
             <button
               type="button"
               onClick={() => {
                 setSelectedCategory('All');
                 setShowAllInAllView(false);
               }}
-              className={`text-xs px-3.5 py-1.5 rounded-full font-mono whitespace-nowrap transition-all ${
+              className={`text-xs px-3.5 py-1.5 rounded-lg font-mono whitespace-nowrap transition-all ${
                 selectedCategory === 'All'
                   ? 'bg-foreground text-background font-semibold shadow-subtle'
                   : 'text-muted-foreground hover:text-foreground hover:bg-card/40'
@@ -165,7 +165,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
                 key={cat}
                 type="button"
                 onClick={() => setSelectedCategory(cat)}
-                className={`text-xs px-3.5 py-1.5 rounded-full font-mono whitespace-nowrap transition-all ${
+                className={`text-xs px-3.5 py-1.5 rounded-lg font-mono whitespace-nowrap transition-all ${
                   selectedCategory === cat
                     ? 'bg-foreground text-background font-semibold shadow-subtle'
                     : 'text-muted-foreground hover:text-foreground hover:bg-card/40'
@@ -217,7 +217,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
                 <button
                   type="button"
                   onClick={() => setShowAllInAllView((prev) => !prev)}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono text-muted-foreground hover:text-foreground px-4 py-1.5 rounded-full glass border border-border hover:border-foreground/30 transition shadow-subtle"
+                  className="inline-flex items-center gap-1.5 text-xs font-mono text-muted-foreground hover:text-foreground px-4 py-1.5 rounded-xl glass border border-border hover:border-foreground/30 transition shadow-subtle"
                 >
                   <span>
                     {showAllInAllView 
