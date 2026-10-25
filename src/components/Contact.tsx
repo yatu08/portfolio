@@ -85,30 +85,30 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-28 relative overflow-hidden">
+    <section id="contact" className="py-24 sm:py-32 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto">
-          <div className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold mb-3">
+          <div className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold mb-3">
             05 / Dialogue
           </div>
-          <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground break-words">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground break-words">
             Let's build something <span className="text-gradient">exceptional</span>
           </h2>
-          <p className="mt-4 text-muted-foreground text-sm sm:text-lg leading-relaxed break-words">
+          <p className="mt-4 text-muted-foreground text-sm sm:text-base leading-relaxed break-words">
             Have an open engineering role, a high-growth product, or a technical inquiry? Send a message — I typically reply within 24 hours.
           </p>
         </div>
 
         {/* Content: Form + Quick Contact Cards */}
-        <div className="mt-10 sm:mt-14 grid lg:grid-cols-5 gap-6 sm:gap-8 items-start min-w-0 w-full">
+        <div className="mt-12 sm:mt-16 grid lg:grid-cols-5 gap-6 sm:gap-8 items-start min-w-0 w-full">
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="lg:col-span-3 glass rounded-2xl p-4 sm:p-8 space-y-4 shadow-card border border-border min-w-0"
+            className="lg:col-span-3 apple-glass-card rounded-3xl p-6 sm:p-8 space-y-5 border border-border shadow-card min-w-0"
           >
             {status === 'success' && (
-              <div className="p-4 rounded-xl bg-secondary border border-border text-foreground text-sm flex items-start gap-3">
+              <div className="p-4 rounded-2xl bg-secondary border border-border text-foreground text-sm flex items-start gap-3">
                 <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold">Message dispatched.</p>
@@ -120,7 +120,7 @@ export const Contact: React.FC = () => {
             )}
 
             {status === 'error' && (
-              <div className="p-4 rounded-xl bg-destructive/10 border border-destructive/20 text-destructive text-sm flex items-center gap-3">
+              <div className="p-4 rounded-2xl bg-destructive/10 border border-destructive/20 text-destructive text-sm flex items-center gap-3">
                 <AlertCircle className="h-4 w-4 shrink-0" />
                 <span>{errorMessage}</span>
               </div>
@@ -139,7 +139,7 @@ export const Contact: React.FC = () => {
                   placeholder="Jane Doe"
                   maxLength={255}
                   required
-                  className="mt-2 w-full rounded-lg border border-border bg-background/60 px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground/50 transition"
+                  className="mt-2 w-full rounded-xl border border-border/80 bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground/40 transition"
                 />
               </div>
 
@@ -155,7 +155,7 @@ export const Contact: React.FC = () => {
                   placeholder="jane@company.com"
                   maxLength={255}
                   required
-                  className="mt-2 w-full rounded-lg border border-border bg-background/60 px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground/50 transition"
+                  className="mt-2 w-full rounded-xl border border-border/80 bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground/40 transition"
                 />
               </div>
             </div>
@@ -177,14 +177,14 @@ export const Contact: React.FC = () => {
                 maxLength={1000}
                 placeholder="Describe your product, technical challenges, or team setup…"
                 required
-                className="mt-2 w-full rounded-lg border border-border bg-background/60 px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground/50 transition resize-none"
+                className="mt-2 w-full rounded-xl border border-border/80 bg-background/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground/40 transition resize-none leading-relaxed"
               />
             </div>
 
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="inline-flex items-center justify-center gap-2 h-11 px-7 rounded-xl bg-foreground text-background font-medium hover:opacity-90 transition-all active:scale-95 disabled:opacity-60 cursor-pointer shadow-subtle text-sm whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 h-11 px-7 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-all active:scale-[0.98] disabled:opacity-60 cursor-pointer shadow-elegant text-sm whitespace-nowrap"
             >
               {status === 'loading' ? (
                 <>
@@ -201,14 +201,14 @@ export const Contact: React.FC = () => {
           </form>
 
           {/* Quick Contact Cards */}
-          <div className="lg:col-span-2 space-y-3">
+          <div className="lg:col-span-2 space-y-3.5">
             {/* Email Card with 1-click copy */}
-            <div className="glass rounded-xl p-4 border border-border flex items-center justify-between group hover:border-foreground/30 transition-all">
+            <div className="apple-glass-card rounded-2xl p-4 sm:p-5 border border-border flex items-center justify-between group">
               <a
                 href={`mailto:${profileData.email}`}
-                className="flex items-center gap-3 min-w-0 flex-1"
+                className="flex items-center gap-3.5 min-w-0 flex-1"
               >
-                <div className="h-10 w-10 rounded-xl bg-card border border-border shadow-subtle flex items-center justify-center shrink-0 group-hover:border-foreground/40 transition-colors">
+                <div className="h-11 w-11 rounded-2xl bg-card border border-border shadow-subtle flex items-center justify-center shrink-0 group-hover:border-foreground/40 transition-colors">
                   <Mail className="h-4 w-4 text-foreground" strokeWidth={1.75} />
                 </div>
                 <div className="min-w-0">
@@ -224,7 +224,7 @@ export const Contact: React.FC = () => {
               <button
                 type="button"
                 onClick={handleCopyEmail}
-                className="h-8 w-8 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted transition shrink-0 ml-2"
+                className="h-8 w-8 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-card transition shrink-0 ml-2"
                 title="Copy email to clipboard"
               >
                 {copiedEmail ? (
@@ -240,16 +240,16 @@ export const Contact: React.FC = () => {
               href={profileData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass rounded-xl p-4 flex items-center gap-3 hover:border-foreground/30 transition-all group border border-border"
+              className="apple-glass-card rounded-2xl p-4 sm:p-5 flex items-center gap-3.5 group border border-border"
             >
-              <div className="h-10 w-10 rounded-xl bg-card border border-border shadow-subtle flex items-center justify-center shrink-0 group-hover:border-foreground/40 transition-colors">
+              <div className="h-11 w-11 rounded-2xl bg-card border border-border shadow-subtle flex items-center justify-center shrink-0 group-hover:border-foreground/40 transition-colors">
                 <Linkedin className="h-4 w-4 text-foreground" strokeWidth={1.75} />
               </div>
               <div className="min-w-0">
                 <div className="text-[11px] uppercase tracking-wider text-muted-foreground font-mono">
                   Network
                 </div>
-                <div className="font-semibold truncate text-foreground text-sm">
+                <div className="font-semibold truncate text-foreground text-sm mt-0.5">
                   Connect on LinkedIn
                 </div>
               </div>
@@ -260,23 +260,23 @@ export const Contact: React.FC = () => {
               href={profileData.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass rounded-xl p-4 flex items-center gap-3 hover:border-foreground/30 transition-all group border border-border"
+              className="apple-glass-card rounded-2xl p-4 sm:p-5 flex items-center gap-3.5 group border border-border"
             >
-              <div className="h-10 w-10 rounded-xl bg-card border border-border shadow-subtle flex items-center justify-center shrink-0 group-hover:border-foreground/40 transition-colors">
+              <div className="h-11 w-11 rounded-2xl bg-card border border-border shadow-subtle flex items-center justify-center shrink-0 group-hover:border-foreground/40 transition-colors">
                 <Github className="h-4 w-4 text-foreground" strokeWidth={1.75} />
               </div>
               <div className="min-w-0">
                 <div className="text-[11px] uppercase tracking-wider text-muted-foreground font-mono">
                   Codebase
                 </div>
-                <div className="font-medium truncate text-foreground text-xs sm:text-[13px] font-mono">
+                <div className="font-medium truncate text-foreground text-xs sm:text-[13px] font-mono mt-0.5">
                   github.com/{profileData.githubUsername}
                 </div>
               </div>
             </a>
 
             {/* Availability Status Card */}
-            <div className="glass rounded-xl p-4 border border-border bg-card">
+            <div className="apple-glass rounded-2xl p-4 sm:p-5 border border-border">
               <div className="text-[11px] font-mono uppercase tracking-wider text-muted-foreground">
                 Status
               </div>

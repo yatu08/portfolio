@@ -94,15 +94,15 @@ const engineer: FrontendDeveloper = {
   ];
 
   return (
-    <section className="relative pt-28 sm:pt-32 pb-8 sm:pb-10 overflow-hidden">
+    <section className="relative pt-32 sm:pt-40 pb-16 sm:pb-20 overflow-hidden">
       {/* Background Architectural Grid & Gentle Ambient Vignette */}
-      <div className="absolute inset-0 -z-10 grid-bg opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 -z-10 grid-bg opacity-30 pointer-events-none" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-background/60 to-background pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[320px] sm:w-[700px] h-[250px] sm:h-[350px] bg-gradient-to-b from-foreground/[0.04] to-transparent rounded-full blur-3xl pointer-events-none -z-10 max-w-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[320px] sm:w-[760px] h-[280px] sm:h-[400px] bg-gradient-to-b from-foreground/[0.035] to-transparent rounded-full blur-3xl pointer-events-none -z-10 max-w-full" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Availability Badge */}
-        <div className="inline-flex items-center gap-2.5 glass rounded-lg px-3.5 py-1.5 text-xs sm:text-[13px] font-mono mb-8 border border-border shadow-subtle hover:border-foreground/30 transition-colors">
+        <div className="inline-flex items-center gap-2.5 glass-pill rounded-full px-4 py-1.5 text-xs sm:text-[13px] font-mono mb-8 border border-border shadow-subtle hover:border-foreground/30 transition-colors">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
@@ -111,22 +111,22 @@ const engineer: FrontendDeveloper = {
         </div>
 
         {/* Main Grid: Left copy, Right architectural developer card */}
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-w-0 w-full">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center min-w-0 w-full">
           <div className="lg:col-span-7 min-w-0 w-full">
             {/* Main Headline */}
-            <h1 className="font-display text-3xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] sm:leading-[1.04] tracking-tight break-words">
+            <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] sm:leading-[1.04] tracking-tight break-words">
               Hi, I'm <span className="text-gradient">{profileData.name}</span>
             </h1>
 
             {/* Sub-headline: Clear Role Definition */}
-            <div className="mt-3 sm:mt-3.5 text-lg sm:text-2xl font-display font-semibold text-foreground/90 tracking-tight flex items-center gap-1.5 sm:gap-2 flex-wrap">
+            <div className="mt-3.5 sm:mt-4 text-lg sm:text-2xl font-display font-semibold text-foreground/90 tracking-tight flex items-center gap-2 flex-wrap">
               <span>Frontend Developer</span>
-              <span className="text-muted-foreground/50 font-light">·</span>
+              <span className="text-muted-foreground/40 font-light">·</span>
               <span className="text-muted-foreground font-normal text-base sm:text-xl">React, Angular &amp; Next.js</span>
             </div>
 
             {/* Professional Summary */}
-            <p className="mt-5 sm:mt-6 max-w-2xl text-sm sm:text-lg text-muted-foreground leading-relaxed break-words">
+            <p className="mt-5 sm:mt-6 max-w-2xl text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed break-words">
               Frontend Developer with <strong className="text-foreground font-semibold">{profileData.experienceYears} years of professional experience</strong> building 
               responsive, scalable, and user-friendly web applications with <strong className="text-foreground font-semibold">React.js</strong>, <strong className="text-foreground font-semibold">Angular</strong>, <strong className="text-foreground font-semibold">Next.js</strong>, 
               and <strong className="text-foreground font-semibold">TypeScript</strong>. Specializing in turning complex Figma designs into pixel-perfect, accessible interfaces, 
@@ -134,11 +134,11 @@ const engineer: FrontendDeveloper = {
             </p>
 
             {/* Quick Skills Badges */}
-            <div className="mt-5 sm:mt-6 flex flex-wrap gap-1.5 sm:gap-2">
+            <div className="mt-6 sm:mt-7 flex flex-wrap gap-2">
               {quickSkills.map((skill) => (
                 <span
                   key={skill}
-                  className="text-xs sm:text-[13px] font-mono px-2.5 sm:px-3 py-1 rounded-lg border border-border bg-card/80 text-foreground font-medium hover:border-foreground/40 transition shadow-subtle"
+                  className="text-xs sm:text-[13px] font-mono px-3 py-1 rounded-full border border-border glass-pill text-foreground font-medium shadow-subtle"
                 >
                   {skill}
                 </span>
@@ -146,11 +146,11 @@ const engineer: FrontendDeveloper = {
             </div>
 
             {/* Action CTAs */}
-            <div className="mt-7 sm:mt-9 flex flex-wrap items-center gap-2.5 sm:gap-3">
+            <div className="mt-8 sm:mt-9 flex flex-wrap items-center gap-3">
               {/* Primary CTA: Classy Solid Button */}
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-2 h-11 px-6 rounded-xl bg-foreground text-background font-medium hover:opacity-90 transition-all duration-150 active:scale-95 shadow-subtle text-sm whitespace-nowrap"
+                className="group inline-flex items-center gap-2 h-11 px-6 rounded-full bg-foreground text-background font-medium hover:opacity-90 transition-all duration-150 active:scale-[0.98] shadow-elegant text-sm whitespace-nowrap"
               >
                 <span>Hire me</span>
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.75} />
@@ -159,7 +159,7 @@ const engineer: FrontendDeveloper = {
               {/* Secondary CTA: Clean Outline */}
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 h-11 px-6 rounded-xl border border-border bg-card/60 hover:bg-muted text-foreground transition-all duration-150 font-medium active:scale-95 text-sm whitespace-nowrap"
+                className="inline-flex items-center gap-2 h-11 px-6 rounded-full glass border border-border text-foreground transition-all duration-150 font-medium active:scale-[0.98] text-sm whitespace-nowrap hover:border-foreground/30"
               >
                 <span>View Projects</span>
               </a>
@@ -168,7 +168,7 @@ const engineer: FrontendDeveloper = {
               <button
                 type="button"
                 onClick={onOpenResume}
-                className="inline-flex items-center gap-2 h-11 px-6 rounded-xl border border-border bg-card/60 hover:bg-muted text-foreground transition-all duration-150 font-medium active:scale-95 text-sm whitespace-nowrap"
+                className="inline-flex items-center gap-2 h-11 px-6 rounded-full glass border border-border text-foreground transition-all duration-150 font-medium active:scale-[0.98] text-sm whitespace-nowrap hover:border-foreground/30"
               >
                 <Download className="h-3.5 w-3.5 text-muted-foreground" strokeWidth={1.75} />
                 <span>Resume</span>
@@ -176,13 +176,13 @@ const engineer: FrontendDeveloper = {
             </div>
 
             {/* Verified Social Links */}
-            <div className="mt-7 sm:mt-9 flex flex-wrap items-center gap-2.5 text-muted-foreground">
+            <div className="mt-8 sm:mt-9 flex flex-wrap items-center gap-2.5 text-muted-foreground">
               <a
                 href={profileData.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"
-                className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground hover:bg-secondary/70 transition-all shadow-subtle text-foreground/80 shrink-0"
+                className="h-10 w-10 rounded-full glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground transition-all shadow-subtle text-foreground/80 shrink-0 active:scale-95"
                 title="GitHub"
               >
                 <Github className="h-4 w-4" strokeWidth={1.75} />
@@ -192,7 +192,7 @@ const engineer: FrontendDeveloper = {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
-                className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground hover:bg-secondary/70 transition-all shadow-subtle text-foreground/80 shrink-0"
+                className="h-10 w-10 rounded-full glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground transition-all shadow-subtle text-foreground/80 shrink-0 active:scale-95"
                 title="LinkedIn"
               >
                 <Linkedin className="h-4 w-4" strokeWidth={1.75} />
@@ -200,12 +200,12 @@ const engineer: FrontendDeveloper = {
               <a
                 href={`mailto:${profileData.email}`}
                 aria-label="Send Email"
-                className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground hover:bg-secondary/70 transition-all shadow-subtle text-foreground/80 shrink-0"
+                className="h-10 w-10 rounded-full glass border border-border flex items-center justify-center hover:border-foreground/40 hover:text-foreground transition-all shadow-subtle text-foreground/80 shrink-0 active:scale-95"
                 title="Send Email"
               >
                 <Mail className="h-4 w-4" strokeWidth={1.75} />
               </a>
-              <span className="text-xs sm:text-[13px] font-mono text-foreground/80 pl-2 sm:pl-2.5 sm:border-l sm:border-border font-medium break-all">
+              <span className="text-xs sm:text-[13px] font-mono text-foreground/80 pl-2 sm:pl-3 sm:border-l sm:border-border/60 font-medium break-all">
                 {profileData.email}
               </span>
             </div>
@@ -213,7 +213,7 @@ const engineer: FrontendDeveloper = {
 
           {/* Right Column: Architectural Developer Window */}
           <div className="lg:col-span-5 min-w-0 w-full mt-6 lg:mt-0">
-            <div className="glass rounded-2xl p-3.5 sm:p-5 border border-border shadow-card hover:shadow-spotlight transition-all duration-300 overflow-hidden w-full min-w-0">
+            <div className="apple-glass-card rounded-3xl p-4 sm:p-6 border border-border shadow-elegant overflow-hidden w-full min-w-0">
               {/* Window Title Bar */}
               <div className="flex items-center justify-between pb-3 mb-3 border-b border-border/70">
                 <div className="flex items-center gap-1.5 sm:gap-2">
@@ -410,25 +410,25 @@ const engineer: FrontendDeveloper = {
         </div>
 
         {/* Professional Statistics Cards */}
-        <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 w-full min-w-0">
+        <div className="mt-12 sm:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full min-w-0">
           {profileData.stats.map((stat, idx) => (
             <div
               key={idx}
-              className="glass rounded-2xl p-3.5 sm:p-5 border border-border shadow-subtle hover:border-foreground/30 transition-all duration-200 min-w-0"
+              className="apple-glass-card rounded-2xl p-4 sm:p-6 border border-border shadow-subtle min-w-0"
             >
-              <div className="text-2xl sm:text-4xl font-display font-bold text-foreground">
+              <div className="text-2xl sm:text-4xl font-display font-bold text-foreground tracking-tight">
                 {stat.value}
               </div>
-              <div className="text-[11px] sm:text-xs text-muted-foreground mt-1 sm:mt-1.5 font-medium leading-tight">
+              <div className="text-[11px] sm:text-xs text-muted-foreground mt-1.5 font-medium leading-tight">
                 {stat.label}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Enterprise Competencies & Tech Stack Marquee - seamlessly covers transition gap */}
-        <div className="mt-8 pt-6 border-t border-border/60 w-full min-w-0 overflow-hidden">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono text-muted-foreground mb-3">
+        {/* Enterprise Competencies & Tech Stack Marquee */}
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-border/50 w-full min-w-0 overflow-hidden">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono text-muted-foreground mb-3.5">
             <span className="flex items-center gap-2 text-foreground font-semibold uppercase tracking-wider text-[11px]">
               <Sparkles className="h-3.5 w-3.5 text-foreground" strokeWidth={1.75} />
               Core Competencies &amp; Production Stack
@@ -438,15 +438,15 @@ const engineer: FrontendDeveloper = {
             </span>
           </div>
 
-          <div className="relative overflow-hidden rounded-2xl border border-border/80 glass py-3 w-full min-w-0">
-            <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-12 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-12 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+          <div className="relative overflow-hidden rounded-2xl border border-border/80 apple-glass py-3.5 w-full min-w-0">
+            <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
             
             <div className="animate-marquee flex items-center gap-3 sm:gap-6 whitespace-nowrap">
               {techStackPills.concat(techStackPills).map((item, idx) => (
                 <div
                   key={idx}
-                  className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-card/70 border border-border/70 text-[11px] sm:text-xs font-mono text-foreground font-medium shadow-subtle hover:border-foreground/40 transition shrink-0"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 rounded-full glass-pill text-[11px] sm:text-xs font-mono text-foreground font-medium shadow-subtle hover:border-foreground/40 transition shrink-0"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0" />
                   <span>{item}</span>

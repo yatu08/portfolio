@@ -22,15 +22,15 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 overflow-y-auto bg-black/70 backdrop-blur-sm animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 overflow-y-auto bg-black/75 backdrop-blur-md animate-fade-in">
       <div
-        className="relative w-full max-w-4xl glass rounded-2xl p-5 sm:p-8 my-auto shadow-2xl border border-border/80 bg-card text-card-foreground overflow-hidden flex flex-col max-h-[calc(100vh-3.5rem)] sm:max-h-[calc(100vh-5rem)]"
+        className="relative w-full max-w-4xl apple-glass-card rounded-3xl p-6 sm:p-8 my-auto shadow-elegant border border-border/80 overflow-hidden flex flex-col max-h-[calc(100vh-3.5rem)] sm:max-h-[calc(100vh-5rem)]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Controls */}
-        <div className="flex items-center justify-between pb-5 border-b border-border shrink-0">
+        <div className="flex items-center justify-between pb-5 border-b border-border/70 shrink-0">
           <div className="flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+            <span className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
             <span className="text-xs font-mono uppercase tracking-wider text-muted-foreground font-semibold">
               Curriculum Vitae · 4+ Years Experience
             </span>
@@ -38,7 +38,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 sm:gap-2 h-8 px-2.5 sm:px-3.5 rounded-lg bg-foreground text-background text-xs font-medium hover:opacity-90 transition shadow-subtle whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 sm:gap-2 h-8 px-3.5 sm:px-4 rounded-full bg-foreground text-background text-xs font-medium hover:opacity-90 active:scale-95 transition shadow-subtle whitespace-nowrap"
               title="Print or Save as PDF"
             >
               <Printer className="h-3.5 w-3.5" strokeWidth={1.75} />
@@ -47,7 +47,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             </button>
             <button
               onClick={onClose}
-              className="h-8 w-8 rounded-lg flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted transition"
+              className="h-8 w-8 rounded-full glass-pill border border-border/70 flex items-center justify-center text-muted-foreground hover:text-foreground transition active:scale-95"
               aria-label="Close resume modal"
             >
               <X className="h-4 w-4" strokeWidth={1.75} />
@@ -97,20 +97,20 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               Core Technical Competencies
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              <div className="glass rounded-xl p-3 border border-border">
+              <div className="apple-glass rounded-2xl p-3.5 border border-border/70">
                 <span className="font-semibold text-foreground">Frontend Frameworks:</span>
                 <p className="text-muted-foreground mt-1">React.js, Next.js, Angular, RxJS</p>
               </div>
-              <div className="glass rounded-xl p-3 border border-border">
-                <span className="font-semibold text-foreground">Languages & Core:</span>
+              <div className="apple-glass rounded-2xl p-3.5 border border-border/70">
+                <span className="font-semibold text-foreground">Languages &amp; Core:</span>
                 <p className="text-muted-foreground mt-1">JavaScript (ES6+), TypeScript, HTML5, CSS3, SCSS</p>
               </div>
-              <div className="glass rounded-xl p-3 border border-border">
-                <span className="font-semibold text-foreground">Styling & UI Systems:</span>
+              <div className="apple-glass rounded-2xl p-3.5 border border-border/70">
+                <span className="font-semibold text-foreground">Styling &amp; UI Systems:</span>
                 <p className="text-muted-foreground mt-1">Tailwind CSS, CSS Modules, Responsive Web Design, Component Architecture</p>
               </div>
-              <div className="glass rounded-xl p-3 border border-border">
-                <span className="font-semibold text-foreground">Tools & AI Frontend:</span>
+              <div className="apple-glass rounded-2xl p-3.5 border border-border/70">
+                <span className="font-semibold text-foreground">Tools &amp; AI Frontend:</span>
                 <p className="text-muted-foreground mt-1">Figma to Code, Git / GitHub, REST APIs, OpenAI / Claude API Integrations</p>
               </div>
             </div>

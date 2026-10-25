@@ -16,23 +16,25 @@ export const About: React.FC = () => {
   };
 
   return (
-    <section id="about" className="pt-8 sm:pt-10 pb-20 sm:pb-24 relative overflow-hidden">
+    <section id="about" className="py-24 sm:py-32 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Section Header */}
-        <div className="mb-3">
-          <span className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold">
+        <div>
+          <div className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold">
             01 / Philosophy
-          </span>
+          </div>
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground max-w-3xl break-words">
+            Engineering intuitive, high-performance <span className="text-gradient">interfaces</span>
+          </h2>
+          <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-2xl">
+            A deliberate balance of architectural discipline, atomic design tokens, and fluid user micro-interactions.
+          </p>
         </div>
 
-        <h2 className="text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground max-w-3xl break-words">
-          Engineering intuitive, high-performance <span className="text-gradient">interfaces</span>
-        </h2>
-
         {/* Narrative & Highlights */}
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 mt-10 sm:mt-12 items-start min-w-0 w-full">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 mt-12 sm:mt-16 items-start min-w-0 w-full">
           {/* Detailed Narrative */}
-          <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-muted-foreground text-sm sm:text-lg leading-relaxed min-w-0 break-words">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-muted-foreground text-sm sm:text-base lg:text-lg leading-relaxed min-w-0 break-words">
             {profileData.aboutDetailed.map((paragraph, idx) => (
               <p key={idx} className="leading-relaxed">
                 {paragraph}
@@ -45,15 +47,15 @@ export const About: React.FC = () => {
             {profileData.coreValues.map((val, idx) => (
               <div
                 key={idx}
-                className="glass rounded-2xl p-4 sm:p-5 border border-border hover:border-foreground/30 hover:shadow-spotlight transition-all duration-200 group min-w-0"
+                className="apple-glass-card rounded-2xl p-5 sm:p-6 border border-border shadow-card min-w-0"
               >
-                <div className="h-10 w-10 rounded-xl bg-card border border-border shadow-subtle flex items-center justify-center group-hover:border-foreground/40 transition-colors">
+                <div className="h-11 w-11 rounded-xl bg-card/80 border border-border shadow-subtle flex items-center justify-center">
                   {iconMap[val.icon] || <Code2 className="h-4 w-4 text-foreground" strokeWidth={1.75} />}
                 </div>
-                <h4 className="mt-4 font-display font-semibold text-base sm:text-lg text-foreground">
+                <h4 className="mt-4 font-display font-semibold text-base sm:text-lg text-foreground tracking-tight">
                   {val.title}
                 </h4>
-                <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">
+                <p className="text-xs sm:text-[13px] text-muted-foreground mt-2 leading-relaxed">
                   {val.description}
                 </p>
               </div>

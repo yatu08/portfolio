@@ -32,19 +32,22 @@ export const Projects: React.FC = () => {
   });
 
   return (
-    <section id="projects" className="py-20 sm:py-28 relative overflow-hidden">
+    <section id="projects" className="py-24 sm:py-32 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0">
         {/* Section Header */}
         <div className="flex items-start sm:items-end justify-between flex-wrap gap-4 sm:gap-6">
           <div>
-            <div className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold">
+            <div className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold">
               03 / Selected Works
             </div>
-            <h2 className="mt-3 text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground break-words">
+            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground break-words">
               Featured <span className="text-gradient">Projects</span>
             </h2>
+            <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-xl">
+              Production architectures engineered for performance, scale, and uncompromising UX quality.
+            </p>
           </div>
-          <div className="flex items-center gap-2 glass px-3.5 py-1.5 rounded-xl border border-border text-xs text-muted-foreground max-w-full">
+          <div className="flex items-center gap-2 glass-pill px-4 py-1.5 rounded-full border border-border text-xs text-muted-foreground max-w-full">
             <ShieldCheck className="h-3.5 w-3.5 text-foreground shrink-0" strokeWidth={1.75} />
             <span className="truncate">Enterprise systems &amp; client IP protected under NDA.</span>
           </div>
@@ -60,15 +63,15 @@ export const Projects: React.FC = () => {
                 key={filter}
                 type="button"
                 onClick={() => setActiveFilter(filter)}
-                className={`text-xs px-3.5 py-1.5 rounded-lg font-mono transition-all flex items-center gap-2 whitespace-nowrap ${
+                className={`text-xs px-4 py-1.5 rounded-full font-mono transition-all flex items-center gap-2 whitespace-nowrap ${
                   isActive
-                    ? 'bg-foreground text-background font-medium'
-                    : 'glass border border-border text-muted-foreground hover:text-foreground hover:bg-muted/40'
+                    ? 'bg-foreground text-background font-semibold shadow-subtle'
+                    : 'glass border border-border text-muted-foreground hover:text-foreground hover:border-foreground/30'
                 }`}
               >
                 <span>{filter}</span>
                 <span
-                  className={`text-[10px] px-1.5 py-0.2 rounded font-mono ${
+                  className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
                     isActive ? 'bg-background/20 text-background' : 'bg-muted text-muted-foreground'
                   }`}
                 >
@@ -83,16 +86,16 @@ export const Projects: React.FC = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="mt-10 grid md:grid-cols-2 gap-8">
+        <div className="mt-12 sm:mt-16 grid md:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <article
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-card hover:shadow-spotlight hover:border-foreground/30 transition-all duration-200 cursor-pointer flex flex-col justify-between"
+              className="group relative overflow-hidden rounded-3xl border border-border apple-glass-card shadow-card hover:shadow-spotlight transition-all duration-300 cursor-pointer flex flex-col justify-between"
             >
               {/* Visual Architectural Canvas Banner */}
               <div>
-                <div className="relative h-52 bg-gradient-to-br from-zinc-900 to-black p-6 flex flex-col justify-between overflow-hidden border-b border-border/80">
+                <div className="relative h-56 bg-gradient-to-br from-zinc-900 to-black p-6 sm:p-7 flex flex-col justify-between overflow-hidden border-b border-border/70">
                   <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
                   
                   {/* Subtle architectural radial lighting */}
@@ -100,7 +103,7 @@ export const Projects: React.FC = () => {
 
                   {/* Top Bar inside banner */}
                   <div className="flex items-center justify-between z-10">
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-300 bg-white/10 backdrop-blur-md rounded px-2.5 py-0.5 border border-white/15">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-zinc-300 bg-white/10 backdrop-blur-md rounded-full px-3 py-1 border border-white/15">
                       {project.category}
                     </span>
                     <div
@@ -116,20 +119,20 @@ export const Projects: React.FC = () => {
                     <h3 className="font-display font-bold text-2xl sm:text-3xl text-white tracking-tight">
                       {project.name}
                     </h3>
-                    <p className="text-xs font-mono text-zinc-400 mt-1">
+                    <p className="text-xs font-mono text-zinc-400 mt-1.5">
                       {project.subtitle}
                     </p>
                   </div>
                 </div>
 
                 {/* Card Content */}
-                <div className="p-6">
-                  <p className="text-sm text-foreground/80 leading-relaxed">
+                <div className="p-6 sm:p-7">
+                  <p className="text-sm sm:text-[15px] text-foreground/80 leading-relaxed">
                     {project.description}
                   </p>
 
                   {/* Role Highlight */}
-                  <div className="mt-4 text-xs font-mono text-muted-foreground flex items-center gap-2 bg-secondary/50 p-2.5 rounded-lg border border-border">
+                  <div className="mt-5 text-xs font-mono text-muted-foreground flex items-center gap-2 bg-secondary/60 p-3 rounded-2xl border border-border/80">
                     <span className="text-foreground font-semibold">Role:</span>
                     <span className="text-foreground/90">{project.role}</span>
                   </div>
@@ -137,19 +140,19 @@ export const Projects: React.FC = () => {
               </div>
 
               {/* Technologies Badges */}
-              <div className="px-6 pb-6 pt-0">
-                <div className="flex flex-wrap gap-1.5 border-t border-border/70 pt-4 items-center justify-between">
+              <div className="px-6 sm:px-7 pb-6 sm:pb-7 pt-0">
+                <div className="flex flex-wrap gap-2 border-t border-border/60 pt-4 items-center justify-between">
                   <div className="flex flex-wrap gap-1.5">
                     {project.technologies.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs font-mono px-2.5 py-1 rounded-md bg-secondary text-foreground font-medium border border-border"
+                        className="text-xs font-mono px-2.5 py-1 rounded-lg glass-pill text-foreground font-medium border border-border"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 4 && (
-                      <span className="text-xs font-mono px-2 py-1 rounded-md bg-secondary text-muted-foreground border border-border">
+                      <span className="text-xs font-mono px-2 py-1 rounded-lg glass-pill text-muted-foreground border border-border">
                         +{project.technologies.length - 4}
                       </span>
                     )}

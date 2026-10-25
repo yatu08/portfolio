@@ -43,8 +43,8 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
 
   const renderDesignSystemCard = (isFullWidth: boolean) => (
     <div
-      className={`glass rounded-2xl border border-border shadow-card relative overflow-hidden group transition-all duration-300 ${
-        isFullWidth ? 'p-6 sm:p-8 mt-10 w-full' : 'p-6'
+      className={`apple-glass-card rounded-3xl border border-border shadow-elegant relative overflow-hidden group transition-all duration-300 ${
+        isFullWidth ? 'p-6 sm:p-8 mt-12 sm:mt-16 w-full' : 'p-6'
       }`}
     >
       {/* Subtle ambient lighting vignette in full width mode */}
@@ -53,9 +53,9 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
       )}
 
       {/* Header */}
-      <div className="flex items-center justify-between mb-4 pb-3 border-b border-border/70 flex-wrap gap-3">
-        <div className="flex items-center gap-3">
-          <div className="h-9 w-9 rounded-xl bg-foreground text-background flex items-center justify-center shadow-subtle shrink-0">
+      <div className="flex items-center justify-between mb-5 pb-4 border-b border-border/70 flex-wrap gap-4">
+        <div className="flex items-center gap-3.5">
+          <div className="h-10 w-10 rounded-2xl bg-foreground text-background flex items-center justify-center shadow-subtle shrink-0">
             <Sparkles className="h-4 w-4" strokeWidth={1.75} />
           </div>
           <div>
@@ -65,7 +65,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
                 8 Live Primitives
               </span>
             </h4>
-            <p className="text-xs sm:text-[13px] text-muted-foreground mt-0.5">
+            <p className="text-xs sm:text-[13px] text-muted-foreground mt-1">
               Explore full-screen interactive previews and inspectable TypeScript code
             </p>
           </div>
@@ -75,7 +75,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
           <button
             type="button"
             onClick={onOpenSandbox}
-            className="hidden md:inline-flex items-center gap-2 h-9 px-4 rounded-xl border border-border bg-card/80 hover:bg-secondary text-foreground text-xs font-mono font-medium transition shadow-subtle"
+            className="hidden md:inline-flex items-center gap-2 h-9 px-4 rounded-full border border-border glass hover:border-foreground/40 text-foreground text-xs font-mono font-medium transition shadow-subtle"
           >
             <Code2 className="h-3.5 w-3.5" strokeWidth={1.75} />
             <span>Launch Lab</span>
@@ -90,7 +90,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
 
       {/* Teaser Badges Grid */}
       <div
-        className={`grid gap-2.5 my-4.5 ${
+        className={`grid gap-2.5 my-5 ${
           isFullWidth
             ? 'grid-cols-2 sm:grid-cols-4 lg:grid-cols-8'
             : 'grid-cols-2 sm:grid-cols-4'
@@ -99,7 +99,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
         {componentPrimitives.map((item, idx) => (
           <div
             key={idx}
-            className="p-2.5 rounded-xl border border-border bg-background/60 text-xs font-mono text-foreground/85 flex items-center gap-2 hover:border-foreground/30 hover:bg-secondary/40 transition-colors shadow-subtle min-w-0"
+            className="p-3 rounded-xl border border-border glass-pill text-xs font-mono text-foreground/85 flex items-center gap-2 transition-colors shadow-subtle min-w-0"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0" />
             <span className="truncate" title={item.full}>
@@ -113,7 +113,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
       <button
         type="button"
         onClick={onOpenSandbox}
-        className="w-full mt-4 flex items-center justify-between p-4 rounded-xl bg-foreground text-background font-mono text-xs sm:text-sm font-semibold hover:opacity-95 transition-all active:scale-[0.99] shadow-subtle group"
+        className="w-full mt-4 flex items-center justify-between p-4 rounded-2xl bg-foreground text-background font-mono text-xs sm:text-sm font-semibold hover:opacity-95 transition-all active:scale-[0.99] shadow-elegant group"
       >
         <div className="flex items-center gap-2.5">
           <Code2 className="h-4 w-4" strokeWidth={1.75} />
@@ -125,7 +125,7 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
   );
 
   return (
-    <section id="skills" className="py-28 relative overflow-hidden">
+    <section id="skills" className="py-24 sm:py-32 relative overflow-hidden">
       {/* Delicate Particle Canvas */}
       <ParticleCanvas />
       
@@ -133,26 +133,29 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
-            <div className="text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold">
+            <div className="text-[11px] sm:text-xs font-mono uppercase tracking-[0.25em] text-muted-foreground font-semibold">
               02 / Capabilities
             </div>
-            <h2 className="mt-3 text-3xl sm:text-5xl font-display font-bold tracking-tight text-foreground break-words">
+            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-display font-bold tracking-tight text-foreground break-words">
               Skills &amp; <span className="text-gradient">Toolbox</span>
             </h2>
+            <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-xl">
+              Production-hardened technical stacks across stateful UI, reactive streams, and modern frameworks.
+            </p>
           </div>
 
           {/* Category Filter Tabs */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl glass border border-border min-w-0">
+          <div className="flex flex-wrap items-center gap-1 p-1 rounded-full glass border border-border min-w-0">
             <button
               type="button"
               onClick={() => {
                 setSelectedCategory('All');
                 setShowAllInAllView(false);
               }}
-              className={`text-xs px-3 sm:px-3.5 py-1.5 rounded-lg font-mono whitespace-nowrap transition-all ${
+              className={`text-xs px-3.5 py-1.5 rounded-full font-mono whitespace-nowrap transition-all ${
                 selectedCategory === 'All'
-                  ? 'bg-foreground text-background font-medium'
-                  : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
+                  ? 'bg-foreground text-background font-semibold shadow-subtle'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-card/40'
               }`}
             >
               All ({skillsList.length})
@@ -162,10 +165,10 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
                 key={cat}
                 type="button"
                 onClick={() => setSelectedCategory(cat)}
-                className={`text-xs px-3 sm:px-3.5 py-1.5 rounded-lg font-mono whitespace-nowrap transition-all ${
+                className={`text-xs px-3.5 py-1.5 rounded-full font-mono whitespace-nowrap transition-all ${
                   selectedCategory === cat
-                    ? 'bg-foreground text-background font-medium'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
+                    ? 'bg-foreground text-background font-semibold shadow-subtle'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-card/40'
                 }`}
               >
                 {cat.replace('Frontend ', '').replace(' Integrations', '')}
@@ -175,21 +178,21 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 mt-10 sm:mt-14 items-start min-w-0 w-full">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 mt-12 sm:mt-16 items-start min-w-0 w-full">
           {/* Left Column: Skill Bars in a Compact 2-Column Grid */}
           <div className="lg:col-span-6">
-            <div className="grid sm:grid-cols-2 gap-2.5">
+            <div className="grid sm:grid-cols-2 gap-3">
               {displayedSkills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="group glass rounded-xl p-3 border border-border hover:border-foreground/30 transition-all duration-150 flex flex-col justify-between"
+                  className="group apple-glass-card rounded-2xl p-3.5 sm:p-4 border border-border shadow-subtle flex flex-col justify-between"
                 >
-                  <div className="flex items-center justify-between gap-1.5 mb-2">
+                  <div className="flex items-center justify-between gap-1.5 mb-2.5">
                     <div className="flex items-center gap-1.5 min-w-0">
                       <span className="text-[10px] font-mono text-muted-foreground shrink-0">
                         {skill.index}
                       </span>
-                      <span className="font-medium text-foreground text-xs truncate" title={skill.name}>
+                      <span className="font-semibold text-foreground text-xs sm:text-[13px] truncate" title={skill.name}>
                         {skill.name}
                       </span>
                     </div>
@@ -210,11 +213,11 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
 
             {/* Show All / Show Less button when in 'All' view */}
             {selectedCategory === 'All' && filteredSkills.length > 8 && (
-              <div className="mt-3.5 text-center">
+              <div className="mt-4 text-center">
                 <button
                   type="button"
                   onClick={() => setShowAllInAllView((prev) => !prev)}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono text-muted-foreground hover:text-foreground px-3.5 py-1.5 rounded-lg border border-border hover:bg-muted/50 transition"
+                  className="inline-flex items-center gap-1.5 text-xs font-mono text-muted-foreground hover:text-foreground px-4 py-1.5 rounded-full glass border border-border hover:border-foreground/30 transition shadow-subtle"
                 >
                   <span>
                     {showAllInAllView 
@@ -230,37 +233,37 @@ export const Skills: React.FC<SkillsProps> = ({ onOpenSandbox }) => {
           {/* Right Column: Values & (if expanded) Interactive Component Lab */}
           <div className="lg:col-span-6 space-y-6">
             {/* Feature Cards Grid: Engineering Pillars */}
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="glass rounded-xl p-4 border border-border hover:border-foreground/30 transition-all group">
-                <div className="h-9 w-9 rounded-xl bg-card flex items-center justify-center border border-border shadow-subtle group-hover:border-foreground/40 transition-colors">
+            <div className="grid sm:grid-cols-2 gap-3.5 sm:gap-4">
+              <div className="apple-glass-card rounded-2xl p-5 border border-border shadow-card group">
+                <div className="h-10 w-10 rounded-xl bg-card flex items-center justify-center border border-border shadow-subtle">
                   <Cpu className="h-4 w-4 text-foreground" strokeWidth={1.75} />
                 </div>
-                <h4 className="mt-3 font-display font-semibold text-sm text-foreground">Frontend Architecture</h4>
-                <p className="text-xs text-muted-foreground mt-1">Modular, testable, typed React 18 &amp; Angular 17 patterns</p>
+                <h4 className="mt-4 font-display font-semibold text-sm sm:text-base text-foreground tracking-tight">Frontend Architecture</h4>
+                <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">Modular, testable, typed React 18 &amp; Angular 17 patterns</p>
               </div>
 
-              <div className="glass rounded-xl p-4 border border-border hover:border-foreground/30 transition-all group">
-                <div className="h-9 w-9 rounded-xl bg-card flex items-center justify-center border border-border shadow-subtle group-hover:border-foreground/40 transition-colors">
+              <div className="apple-glass-card rounded-2xl p-5 border border-border shadow-card group">
+                <div className="h-10 w-10 rounded-xl bg-card flex items-center justify-center border border-border shadow-subtle">
                   <GitBranch className="h-4 w-4 text-foreground" strokeWidth={1.75} />
                 </div>
-                <h4 className="mt-3 font-display font-semibold text-sm text-foreground">Reactive State</h4>
-                <p className="text-xs text-muted-foreground mt-1">Predictable reactive streams &amp; state pipelines with RxJS</p>
+                <h4 className="mt-4 font-display font-semibold text-sm sm:text-base text-foreground tracking-tight">Reactive State</h4>
+                <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">Predictable reactive streams &amp; state pipelines with RxJS</p>
               </div>
 
-              <div className="glass rounded-xl p-4 border border-border hover:border-foreground/30 transition-all group">
-                <div className="h-9 w-9 rounded-xl bg-card flex items-center justify-center border border-border shadow-subtle group-hover:border-foreground/40 transition-colors">
+              <div className="apple-glass-card rounded-2xl p-5 border border-border shadow-card group">
+                <div className="h-10 w-10 rounded-xl bg-card flex items-center justify-center border border-border shadow-subtle">
                   <Layers className="h-4 w-4 text-foreground" strokeWidth={1.75} />
                 </div>
-                <h4 className="mt-3 font-display font-semibold text-sm text-foreground">Design Systems</h4>
-                <p className="text-xs text-muted-foreground mt-1">Figma tokens, Tailwind CSS &amp; accessible UI components</p>
+                <h4 className="mt-4 font-display font-semibold text-sm sm:text-base text-foreground tracking-tight">Design Systems</h4>
+                <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">Figma tokens, Tailwind CSS &amp; accessible UI components</p>
               </div>
 
-              <div className="glass rounded-xl p-4 border border-border hover:border-foreground/30 transition-all group">
-                <div className="h-9 w-9 rounded-xl bg-card flex items-center justify-center border border-border shadow-subtle group-hover:border-foreground/40 transition-colors">
+              <div className="apple-glass-card rounded-2xl p-5 border border-border shadow-card group">
+                <div className="h-10 w-10 rounded-xl bg-card flex items-center justify-center border border-border shadow-subtle">
                   <Sparkles className="h-4 w-4 text-foreground" strokeWidth={1.75} />
                 </div>
-                <h4 className="mt-3 font-display font-semibold text-sm text-foreground">AI UI Integrations</h4>
-                <p className="text-xs text-muted-foreground mt-1">Real-time token streaming, prompt UX &amp; LLM search</p>
+                <h4 className="mt-4 font-display font-semibold text-sm sm:text-base text-foreground tracking-tight">AI UI Integrations</h4>
+                <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">Real-time token streaming, prompt UX &amp; LLM search</p>
               </div>
             </div>
 
